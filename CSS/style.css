@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#canvas{
+    border: 1px solid black;
+}
+
+#deliverInput::placeholder{
+    color: black !important;
+    font-weight: bold;
+    margin-right: 15px;
+    padding-right: 40px !important;
+}
+
+#locLabel {
+    position: relative;
+
+}
+      
+#locLabel::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+}
+
+#features{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}

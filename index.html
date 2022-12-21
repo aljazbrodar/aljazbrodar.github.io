@@ -1,14 +1,774 @@
-<pre><div class="text_to_html"> Adte,oeTusa,nal w huadyasatroemnhdbe aldt  refrsyn
-o ra twudb ob iet epefracag,agr itn nhroni  ml aei
-ikasot udnyraie hti a hthdbe on rn l hstm,adsefnlyke
-o h ol ol emd  odadhpypae
-hstm twsrgt twudwr,adn n
-ol aet e aldt ntig
- al,hwvr eoesecudgtt  hn otl noeaoti,atril tpdctsrpeocre,adteie a otfree.  hsi o e tr.  u ti h tr fta erbesui aa
-toh n oeo t osqecs
-ti lotesoyo  ok  okcle h
-ic ie' ud oteGlx  o nErhbo,nvrpbihdo at,adutltetril a
-atoh curd ee eno vnhado yayErha.  eetees  hlyrmral ok  nfc twspoal h otrmral okee ocm u ftegetpbihn oprtoso raMnr-o hc oErha a vrhadete.  o nyi tawol eakbebo,i sas
- ihyscesu n  oepplrta h ee-ta oeCr miu,bte eln hnFfy
-he oeTig od nZr rvt,admr
-otoesa hnOlnCluhdstioyo hl-spia lcbsesWeeGdWn rn,Sm oeo o' raetMsae n h sTi o esnAya? </div></pre>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoorDash Food Delivery & Takeout - From Restaurants Near You</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/chat.css" />
+    <script src="https://unpkg.com/feather-icons@4.27.0/dist/feather.min.js"></script>
+    <!--imported from doordash-->
+    <link rel="preload" href="https://typography.doordash.com/TTNorms-Regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="icon" type="image/svg+xml" href="IMAGES/svg-logo-red.svg">
+
+</head>
+
+<body class="bg-black muli">
+    <iframe id="loading" src="loading.html" style="display: none;"></iframe>
+    <script>
+        window.onload = function() {
+          // Hide the loading screen when the app has finished loading
+          document.getElementById('loading').style.display = 'none';
+        };
+      </script>
+    <div class="chat-box">
+        <div class="chat-box-header">
+            <h3>Contact Support</h3>
+            <p>
+                <i class="fa fa-times"></i>
+            </p>
+        </div>
+        <div class="chat-box-body">
+            <div class="chat-box-body-send">
+                <p>This is my message.</p>
+                <span>12:00</span>
+            </div>
+            <div class="chat-box-body-receive">
+                <p>This is my message.</p>
+                <span>12:00</span>
+            </div>
+            <div class="chat-box-body-receive">
+                <p>This is my message.</p>
+                <span>12:00</span>
+            </div>
+            <div class="chat-box-body-send">
+                <p>This is my message.</p>
+                <span>12:00</span>
+            </div>
+            <div class="chat-box-body-send">
+                <p>This is my message.</p>
+                <span>12:00</span>
+            </div>
+            <div class="chat-box-body-receive">
+                <p>This is my message.</p>
+                <span>12:00</span>
+            </div>
+            <div class="chat-box-body-receive">
+                <p>This is my message.</p>
+                <span>12:00</span>
+            </div>
+            <div class="chat-box-body-send">
+                <p>This is my message.</p>
+                <span>12:00</span>
+            </div>
+        </div>
+        <div class="chat-box-footer">
+            <button id="addExtra">
+                <i class="fa fa-plus"></i>
+            </button>
+            <input placeholder="Enter Your Message" type="text">
+            <i class="send far fa-paper-plane"></i>
+        </div>
+    </div>
+
+
+    <div class="chat-button">
+        <img class="max-h-l2 w-auto" src="IMAGES/svg-logo-red.svg" />
+    </div>
+
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="modal-close-button">&times;</span>
+            <h1>Add What you want here.</h1>
+        </div>
+    </div>
+    <nav style="background-color:rgba(255, 25, 0, 0.5);position: relative;z-index: 10; margin-bottom: -100px;"
+        class="w-100pc flex flex-column md-flex-row md-px-10 py-5">
+        <div class="flex justify-between">
+            <a href="#" class="flex items-center p-2 mr-4 no-underline">
+                <img class="max-h-l2 w-auto" src="IMAGES/svg-logo.svg" />
+                <img class="max-h-l2 w-auto" src="IMAGES/textPartLogo.png" />
+            </a>
+            <a data-toggle="toggle-nav" data-target="#nav-items" href="#"
+                class="flex items-center ml-auto md-hidden indigo-lighter opacity-50 hover-opacity-100 ease-300 p-1 m-3">
+                <i data-feather="menu"></i>
+            </a>
+        </div>
+        <div style="color: white; font-family: DD-TTNorms, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';"
+            id="nav-items" class="hidden flex sm-w-100pc flex-column md-flex md-flex-row md-justify-end items-center">
+            <a href="#home" class="fs-s1 mx-3 py-3 white no-underline">Home</a>
+            <a href="#features" class="fs-s1 mx-3 py-3 white no-underline">Get Started</a>
+            <a href="#pricing" class="fs-s1 mx-3 py-3 white no-underline">Become a partner</a>
+            <a href="#blog" class="fs-s1 mx-3 py-3 white no-underline">Company Info</a>
+            <a href="#" class="button bg-white black fw-600 no-underline mx-5">Sign Up</a>
+        </div>
+    </nav>
+
+    <!-- hero section -->
+    <section style="background-image: url('IMAGES/hero_landing_us_alt.jpg');  background-size: cover;" id="home"
+        class="min-h-100vh flex justify-start items-center">
+        <div class="mx-5 md-mx-l5">
+            <div class="inline-block br-round bg-white-30 white p-2 fs-s2 mb-5">
+                <div class="inline-block bg-white black br-round px-3 py-1 mr-3 fs-s3">Join DoorDash</div>
+                Sign in for a saved address
+            </div>
+            <div>
+                <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Restaurants and more, <br />delivered to your
+                    door</h1>
+
+                <div class="br-8 mt-10 inline-flex">
+                    <!--bw-0 fw-200 -->
+
+                    <label id="locLabel">
+                        <input id="deliverInput" type="text"
+                            class="input-lg half bw-0 fw-200 bg-white  black fs-s3 py-5 min-w-25vw br-r-0"
+                            placeholder="Enter delivery address">
+                    </label>
+                    <button class="button-lg bg-red white focus-white fw-300 fs-s3 mr-0 br-l-0">Find Food</button>
+                </div>
+                <div class="white opacity-20 fs-s3 mt-3">No credit card required</span>
+                </div>
+            </div>
+    </section>
+
+    <!-- features -->
+    <section id="features" class="p-10 md-p-l5">
+        <div class="flex flex-column md-flex-row mx-auto">
+            <div class="w-100pc md-w-40pc">
+                <div class="br-8 p-5 m-5">
+                    <div style="background-image: url('IMAGES/ScootScoot.svg'); height:10rem !important;width:12rem !important;  background-repeat: no-repeat;"
+                        class="inline-block justify-center items-center  w-15 h-l5  mb-5"></div>
+                    <h4 class="black fw-600 fs-m3 mb-5">Become a Dasher</h4>
+                    <div class="black fw-600 fs-m1 lh-3 opacity-50">As a delivery driver, you'll make reliable
+                        money—working anytime, anywhere.</div>
+                    <a style="font-weight: 700;" href="#"
+                        class="mt-5 button bg-red fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Start
+                        earning</a>
+                </div>
+            </div>
+            <div class="w-100pc md-w-40pc">
+                <div class="br-8 p-5 m-5">
+                    <div style="background-image: url('IMAGES/Storefront.svg'); height:10rem !important; width:12rem !important;  background-repeat: no-repeat;"
+                        class="inline-block justify-center items-center w-l5 h-l5 mb-5"><i data-feather="cpu"
+                            class="w-l5"></i></div>
+                    <h4 class="black fw-600 fs-m3 mb-5">Become a Partner</h4>
+                    <div class="black fw-600 fs-m1 opacity-50">Grow your business and reach new customers by partnering
+                        with us.</div>
+                    <a style="font-weight: 700;" href="#"
+                        class="mt-5 button bg-red fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Sign
+                        up your store</a>
+                </div>
+            </div>
+            <div class="w-100pc md-w-40pc">
+                <div class="br-8 p-5 m-5">
+                    <div style="background-image: url('IMAGES/iphone.svg'); height:10rem !important; width:12rem !important;  background-repeat: no-repeat;"
+                        class="inline-block justify-center items-center w-l5 h-l5 mb-5"></div>
+                    <h4 class="black fw-600 fs-m3 mb-5">Try the App</h4>
+                    <div class="black fw-600 fs-m1 opacity-50">Experience the best your neighborhood has to offer, all
+                        in one app.</div>
+                    <a style="font-weight: 700;" href="#"
+                        class="mt-5 button bg-red fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Get
+                        the app</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- slider -->
+    <section style="background-color: rgb(185, 164, 164) !important;" class="relative bg-indigo-lightest-10">
+        <div id="slider-1">
+            <div style="background-image: url('IMAGES/doorDudeOnABike.jpg'); background-repeat: no-repeat;  background-position: center;
+            background-size: cover;" class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
+                <h2 class="white fs-l3 fw-900">It’s all here.
+                    All in one app.</h2>
+                <p class="white fw-600 fs-m1 opacity-100 my-5">Discover local, on-demand delivery or Pickup from
+                    restaurants, nearby grocery and convenience stores, and more.</p>
+                <a href="#" class="button-md bg-red white fs-s3 br-4 black fw-600 no-underline m-5">Get the app</a>
+            </div>
+            <div style="background-image: url('IMAGES/sunnyDay.jpg'); background-repeat: no-repeat;  background-position: center;
+            background-size: cover;" class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
+                <h2 class="white fs-l3 fw-900">Every Flavor Welcome</h2>
+                <p class="black-lightest fw-600 fs-m1 opacity-30 my-5">From your neighborhood sushi spot to the burger
+                    and fries you crave, choose from over 300,000 local and national favorites across the U.S., Canada
+                    and Australia.</p>
+                <a href="#" class="button-md bg-indigo white fs-s3 br-4 black fw-600 no-underline m-5">Find
+                    restaurants</a>
+            </div>
+        </div>
+        <ul class="absolute list-none w-100pc flex justify-between top-50pc">
+            <li><button
+                    class="prev ml-10 br-round border-indigo-lightest indigo-lightest  bg-transparent flex justify-center items-center p-2 focus-indigo-lighter outline-none"><i
+                        data-feather="chevron-left"></i></button></li>
+            <li><button
+                    class="next mr-10 br-round border-indigo-lightest indigo-lightest  bg-transparent flex justify-center items-center p-2  focus-indigo-lighter outline-none"><i
+                        data-feather="chevron-right"></i></button></li>
+        </ul>
+    </section>
+
+    <!-- big text -->
+    <section class="p-10 md-py-10">
+        <div class="w-100pc md-w-70pc mx-auto py-10">
+            <h2 class="white fs-l2 md-fs-xl1 fw-900 lh-2">
+                Lorem ipsum dolor sit amet, <span class="border-b bc-indigo bw-4"> consectetur</span> adipiscing elit,
+                sed do eiusmod tempor </h2>
+        </div>
+    </section>
+
+
+
+    <!-- pricing -->
+    <section id="pricing">
+        <div class="p-10 flex flex-wrap">
+            <div class="w-100pc md-w-50pc">
+                <div class="p-5">
+                    <h4 class="white fw-800 fs-l3 mb-5">Every Flavor Welcome</h4>
+                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">From your neighborhood sushi spot to the burger
+                        and fries you crave, choose from over 300,000 local and national favorites across the U.S.,
+                        Canada and Australia.</div>
+                    <h4 class="white fw-600 fs-m2 mt-10">Restaurants trust us.</h4>
+                    <div class="flex indigo-lightest opacity-50">
+                        <div class="w-25pc">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.78 100" fill="currentColor">
+                                <path
+                                    d="M63.87,44.07h3V56.2h-3Zm4.19,7.55c0-3,1.84-4.79,4.68-4.79s4.68,1.79,4.68,4.79-1.8,4.8-4.68,4.8S68.06,54.67,68.06,51.62Zm6.35,0c0-1.65-.65-2.62-1.67-2.62s-1.66,1-1.66,2.62.63,2.6,1.66,2.6S74.41,53.3,74.41,51.63Zm4.14,5.17h2.88a1.55,1.55,0,0,0,1.62.9c1.14,0,1.74-.62,1.74-1.52V54.49h-.06A2.84,2.84,0,0,1,82,56.13c-2.19,0-3.64-1.67-3.64-4.54s1.38-4.68,3.68-4.68a2.87,2.87,0,0,1,2.76,1.76h0V47h3V56.1c0,2.19-1.93,3.55-4.78,3.55C80.37,59.65,78.72,58.46,78.55,56.8Zm6.25-5.18c0-1.46-.67-2.38-1.73-2.38s-1.71.91-1.71,2.38.64,2.3,1.71,2.3S84.8,53.1,84.8,51.62Zm4.13,0c0-3,1.84-4.79,4.68-4.79s4.69,1.79,4.69,4.79-1.8,4.8-4.69,4.8S88.93,54.67,88.93,51.62Zm6.35,0c0-1.65-.65-2.62-1.67-2.62S92,50,92,51.63s.63,2.6,1.65,2.6S95.28,53.3,95.28,51.63Zm4.16-6.79A1.53,1.53,0,1,1,101,46.31,1.46,1.46,0,0,1,99.44,44.84Zm0,2.2h3V56.2h-3Zm13.89,4.59c0,3-1.33,4.71-3.61,4.71a2.86,2.86,0,0,1-2.8-1.7h-.06v4.52h-3V47h3v1.64h.06a2.87,2.87,0,0,1,2.78-1.77C112,46.91,113.37,48.63,113.37,51.63Zm-3,0c0-1.46-.67-2.39-1.72-2.39s-1.72.94-1.73,2.39.68,2.38,1.73,2.38S110.33,53.08,110.33,51.63Zm8.15-4.8c2.49,0,4,1.18,4.07,3.07h-2.73c0-.65-.54-1.06-1.37-1.06s-1.2.32-1.2.79.33.62,1,.76l1.92.39c1.83.39,2.61,1.13,2.61,2.52,0,1.9-1.73,3.12-4.28,3.12s-4.22-1.22-4.35-3.09h2.89c.09.68.63,1.08,1.51,1.08s1.28-.29,1.28-.77-.28-.58-1-.73l-1.73-.37c-1.79-.37-2.73-1.32-2.73-2.72C114.39,48,116,46.83,118.48,46.83Zm14.31,9.37H129.9V54.47h-.06a2.61,2.61,0,0,1-2.66,1.91,3.19,3.19,0,0,1-3.36-3.45V47h3v5.24c0,1.09.56,1.67,1.49,1.67a1.53,1.53,0,0,0,1.52-1.73V47h3ZM134.24,47h2.9v1.77h.06a2.66,2.66,0,0,1,2.61-1.94,2.39,2.39,0,0,1,2.55,2h.06a2.82,2.82,0,0,1,2.82-2,2.91,2.91,0,0,1,3,3.12V56.2h-3V50.75c0-1-.45-1.46-1.29-1.46a1.31,1.31,0,0,0-1.31,1.48V56.2h-2.85V50.71c0-.92-.45-1.42-1.27-1.42a1.34,1.34,0,0,0-1.33,1.5V56.2h-3Z" />
+                                <path
+                                    d="M55.48,44.62a13.25,13.25,0,0,0-2-3.22A13.53,13.53,0,1,0,34.8,60.72,13.09,13.09,0,0,0,38,62.55a13.39,13.39,0,0,0,5.07,1A13.56,13.56,0,0,0,56.6,50,13.39,13.39,0,0,0,55.48,44.62ZM43.06,39.19a10.71,10.71,0,0,1,4.52,1h0a4.39,4.39,0,0,1-1.08.31,5.73,5.73,0,0,0-4.85,4.85A3,3,0,0,1,38.94,48a5.73,5.73,0,0,0-4.85,4.85,2.91,2.91,0,0,1-.79,1.74h0a10.8,10.8,0,0,1,9.77-15.42ZM34.79,57c.12-.11.24-.21.36-.33a5.48,5.48,0,0,0,1.62-3.23,2.92,2.92,0,0,1,.87-1.82,2.83,2.83,0,0,1,1.81-.86,5.73,5.73,0,0,0,4.85-4.85A2.92,2.92,0,0,1,45.17,44,2.87,2.87,0,0,1,47,43.17a5.48,5.48,0,0,0,3-1.43,10.51,10.51,0,0,1,2.36,2.78.86.86,0,0,1-.13.14,2.87,2.87,0,0,1-1.81.88,5.71,5.71,0,0,0-4.85,4.85,3,3,0,0,1-2.69,2.68A5.76,5.76,0,0,0,38,57.92a3.14,3.14,0,0,1-.49,1.37A10.89,10.89,0,0,1,34.79,57Zm8.27,3.86a10.84,10.84,0,0,1-3-.42,5.78,5.78,0,0,0,.64-2,3,3,0,0,1,2.68-2.68,5.73,5.73,0,0,0,4.86-4.85,3,3,0,0,1,2.68-2.68,5.71,5.71,0,0,0,2.56-1A10.82,10.82,0,0,1,43.06,60.81Z" />
+                            </svg>
+                        </div>
+                        <div class="w-25pc">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.78 100" fill="currentColor">
+                                <path
+                                    d="M46.23,41.39h2V55.31h6v2h-8Zm14.23,0a6,6,0,1,1-6,6A6,6,0,0,1,60.46,41.39Zm0,10a4,4,0,1,0-4-4A4,4,0,0,0,60.46,51.37Zm-4,3.94h8v2h-8Zm25.6,2h-2V55.9a7.69,7.69,0,0,1-4.4,1.39,8,8,0,1,1,6-13.23l-1.47,1.31a6,6,0,1,0-4.46,10,5.77,5.77,0,0,0,4.38-2H74.71v-2l7.37,0Zm7.36-15.9a6,6,0,1,1-6,6A6,6,0,0,1,89.44,41.39Zm0,10a4,4,0,1,0-4-4A4,4,0,0,0,89.44,51.37Zm-4,3.94h8v2h-8ZM97.55,41.39h2v15.9h-2Zm4.77,0,2,0a1.47,1.47,0,0,1,.31,0,6,6,0,1,1,0,11.93h-.31v4h-2Zm2,2v7.91h.31a4,4,0,1,0,0-7.93A1.47,1.47,0,0,0,104.31,43.44Zm14.41-.85-1.48,1.17a1.94,1.94,0,0,0-3.33,1.13V45c0,.88.61,1.47,1.8,1.55,4.58.28,6.68,2.43,6.68,5.27V52a5.9,5.9,0,0,1-10.17,3.42l1.53-1.18a3.6,3.6,0,0,0,2.8,1.14A3.74,3.74,0,0,0,120.48,52v-.14c0-2.67-2.62-3.16-4.89-3.38-2.1-.2-3.61-1.51-3.61-3.4V45a3.85,3.85,0,0,1,3.93-3.56A3.74,3.74,0,0,1,118.72,42.59Zm11.5,12.72c2.49,0,4.46-2.69,4.46-6v-8h2l0,8c0,4.4-2.88,7.95-6.42,7.95s-6.42-3.55-6.42-7.95v-8h2v8C125.77,52.62,127.74,55.31,130.22,55.31Zm21.81,2h-2V47.36l-4.61,6-4.61-6v9.93h-2V41.39l6.6,8.69,6.6-8.69Z" />
+                                <path
+                                    d="M36.63,39a5.44,5.44,0,0,0-10.88,0V55.45l4.48,3.21v7.82h1.92V58.66l4.48-3.21Zm-1.92,9.2-2.56,2.56v-2.4l2.56-2.56Zm-7-2.4,2.56,2.56v2.4l-2.56-2.56Zm7-2.72-3.52,3.52L27.67,43v-2.4l3.52,3.52,3.52-3.52Zm-3.52-7.6a3.54,3.54,0,0,1,3.4,2.61l-3.4,3.39-3.4-3.39A3.54,3.54,0,0,1,31.19,35.44Zm-3.52,19V50.88l2.56,2.56V56.3Zm4.48,1.83V53.44l2.56-2.56v3.59Z" />
+                            </svg>
+                        </div>
+                        <div class="w-25pc">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.78 100" fill="currentColor">
+                                <path
+                                    d="M67.88,57.39a2.65,2.65,0,0,1-1.67-.48,1.56,1.56,0,0,1-.63-1.31V46.33a.26.26,0,0,1,.29-.29h1.68c.19,0,.28.1.28.29v8.55c0,.38.17.57.52.57a1.44,1.44,0,0,0,.44-.05c.2,0,.31.06.32.24l.15,1.25a.26.26,0,0,1-.24.31A3.77,3.77,0,0,1,67.88,57.39Z" />
+                                <path
+                                    d="M77.33,56.32a4.71,4.71,0,0,1-6,0,4,4,0,0,1,0-5.63,4.73,4.73,0,0,1,6,0,4.06,4.06,0,0,1,0,5.62ZM72.91,55a2.13,2.13,0,0,0,2.86,0,2.24,2.24,0,0,0,0-2.94,2.13,2.13,0,0,0-2.86,0,2.24,2.24,0,0,0,0,2.94Z" />
+                                <path
+                                    d="M87.71,49.87c.19,0,.28.1.28.29v7.17a3.26,3.26,0,0,1-1.11,2.57,4.2,4.2,0,0,1-2.91,1,4.68,4.68,0,0,1-2.71-.75,3,3,0,0,1-1.31-2c0-.2,0-.29.27-.29H81.9a.37.37,0,0,1,.33.23,1.31,1.31,0,0,0,.61.71,2.34,2.34,0,0,0,1.12.26,1.77,1.77,0,0,0,1.29-.46,1.7,1.7,0,0,0,.47-1.25v-.63a3.35,3.35,0,0,1-2.08.65,3.88,3.88,0,0,1-2.84-1.09,4,4,0,0,1,0-5.56,3.91,3.91,0,0,1,2.84-1.08,3.36,3.36,0,0,1,2.13.69v-.16a.26.26,0,0,1,.28-.29Zm-3.88,5.72A1.76,1.76,0,0,0,85.2,55a2.45,2.45,0,0,0,0-3,1.75,1.75,0,0,0-1.36-.58,1.8,1.8,0,0,0-1.39.59,2.12,2.12,0,0,0-.54,1.5A2.16,2.16,0,0,0,82.44,55,1.81,1.81,0,0,0,83.83,55.59Z" />
+                                <path
+                                    d="M96.62,56.32a4.73,4.73,0,0,1-6,0,4.07,4.07,0,0,1,0-5.63,4.74,4.74,0,0,1,6,0,4.06,4.06,0,0,1,0,5.62ZM92.19,55a2,2,0,0,0,1.44.55A2,2,0,0,0,95.06,55a2.27,2.27,0,0,0,0-2.94,2,2,0,0,0-1.43-.55,2,2,0,0,0-1.44.55,2.27,2.27,0,0,0,0,2.94Z" />
+                                <path
+                                    d="M101.36,48.17a1.45,1.45,0,0,1-1.91,0,1.21,1.21,0,0,1,0-1.76,1.48,1.48,0,0,1,1.91,0,1.21,1.21,0,0,1,0,1.76Zm.21,9.22a2.69,2.69,0,0,1-1.67-.48,1.58,1.58,0,0,1-.62-1.31V50.16a.26.26,0,0,1,.29-.29h1.68c.19,0,.28.1.28.29v4.72q0,.57.51.57a1.55,1.55,0,0,0,.45-.05c.2,0,.31.06.32.24l.15,1.25a.26.26,0,0,1-.24.31A3.79,3.79,0,0,1,101.57,57.39Z" />
+                                <path
+                                    d="M109.14,49.63A3.92,3.92,0,0,1,112,50.71a4.1,4.1,0,0,1,0,5.59,3.89,3.89,0,0,1-2.86,1.09,3.44,3.44,0,0,1-2.09-.65v3.61c0,.19-.1.28-.29.28h-1.68a.24.24,0,0,1-.28-.28v-8.2a.52.52,0,0,0-.59-.59l-.33,0q-.33,0-.33-.24V50.14a.32.32,0,0,1,.23-.33,3,3,0,0,1,1.08-.18,1.85,1.85,0,0,1,1.81,1A3.37,3.37,0,0,1,109.14,49.63ZM107.58,55a1.91,1.91,0,0,0,2.76,0,2.16,2.16,0,0,0,.55-1.53,2.13,2.13,0,0,0-.55-1.53,1.91,1.91,0,0,0-2.76,0,2.21,2.21,0,0,0-.53,1.53A2.24,2.24,0,0,0,107.58,55Z" />
+                                <path
+                                    d="M117.82,57.39a4.82,4.82,0,0,1-2.57-.62A2.44,2.44,0,0,1,114.09,55c0-.2.07-.3.29-.3h1.47a.38.38,0,0,1,.33.22c.21.54.76.81,1.64.81a1.87,1.87,0,0,0,.89-.18.58.58,0,0,0,.34-.49c0-.26-.16-.44-.48-.56a5.41,5.41,0,0,0-1.17-.25A11.12,11.12,0,0,1,116,54a2.3,2.3,0,0,1-1.17-.67,2.14,2.14,0,0,1,.43-3.1,4.12,4.12,0,0,1,2.42-.64,4.42,4.42,0,0,1,2.36.59,2.23,2.23,0,0,1,1.1,1.57q0,.3-.27.3h-1.48a.31.31,0,0,1-.3-.18,1,1,0,0,0-.52-.53,1.76,1.76,0,0,0-.86-.2,1.74,1.74,0,0,0-.85.17.5.5,0,0,0-.32.46.64.64,0,0,0,.48.59,5.42,5.42,0,0,0,1.19.3,13.08,13.08,0,0,1,1.39.26,2.3,2.3,0,0,1,1.17.67,1.89,1.89,0,0,1,.49,1.37,2,2,0,0,1-.93,1.74A4.37,4.37,0,0,1,117.82,57.39Z" />
+                                <path
+                                    d="M131.83,56.89a.27.27,0,0,1-.23.31,3.86,3.86,0,0,1-1.13.19,2.22,2.22,0,0,1-2-.87,3.62,3.62,0,0,1-2.55.87,3.1,3.1,0,0,1-2.34-.91,3.28,3.28,0,0,1-.89-2.41V50.16c0-.19.09-.29.28-.29h1.68c.19,0,.28.1.28.29v3.61a1.77,1.77,0,0,0,.43,1.23,1.5,1.5,0,0,0,1.15.47,1.66,1.66,0,0,0,1.2-.44,1.6,1.6,0,0,0,.45-1.19V50.16c0-.19.09-.29.28-.29h1.7c.19,0,.28.1.28.29v4.71c0,.39.17.58.5.58a1.58,1.58,0,0,0,.46-.05.26.26,0,0,1,.33.24Z" />
+                                <path
+                                    d="M147.72,56.89a.25.25,0,0,1-.23.31,3.88,3.88,0,0,1-1.15.19,2.67,2.67,0,0,1-1.67-.48A1.56,1.56,0,0,1,144,55.6V53.25a1.77,1.77,0,0,0-.42-1.23,1.42,1.42,0,0,0-1.12-.47,1.25,1.25,0,0,0-1,.44,1.78,1.78,0,0,0-.38,1.18v3.69c0,.19-.09.29-.28.29h-1.69a.26.26,0,0,1-.29-.29V53.25a1.85,1.85,0,0,0-.39-1.23,1.3,1.3,0,0,0-1-.47,1.45,1.45,0,0,0-1.1.44,1.65,1.65,0,0,0-.41,1.18v3.69a.26.26,0,0,1-.29.29H134c-.19,0-.28-.1-.28-.29V52.15a.52.52,0,0,0-.59-.59l-.33,0q-.33,0-.33-.24V50.14a.32.32,0,0,1,.23-.33,3,3,0,0,1,1.08-.18,1.88,1.88,0,0,1,1.78.92,3.38,3.38,0,0,1,2.54-.92,2.87,2.87,0,0,1,2.37,1.06,3.3,3.3,0,0,1,2.62-1.06,3.16,3.16,0,0,1,2.37.91,3.26,3.26,0,0,1,.89,2.41v1.93c0,.38.17.57.49.57a1.5,1.5,0,0,0,.46-.05q.31,0,.33.24Z" />
+                                <path
+                                    d="M30.46,48.57a13.69,13.69,0,0,1,26.57,0h-1.2a9.69,9.69,0,0,0-5.67,1.73,2.86,2.86,0,0,1-.3.19h-.14a2.86,2.86,0,0,1-.3-.19,10.17,10.17,0,0,0-11.35,0,2.86,2.86,0,0,1-.3.19h-.14a2.86,2.86,0,0,1-.3-.19,9.69,9.69,0,0,0-5.67-1.73Zm23.21,6.27a3.37,3.37,0,0,1,2.16-.71h1.61V50.92H55.83A6.38,6.38,0,0,0,52,52.14a3.64,3.64,0,0,1-4.32,0,6.8,6.8,0,0,0-7.77,0,3.64,3.64,0,0,1-4.32,0,6.38,6.38,0,0,0-3.88-1.22H30.05v3.21h1.61a3.37,3.37,0,0,1,2.16.71,6.78,6.78,0,0,0,7.76,0,3.39,3.39,0,0,1,2.16-.71,3.35,3.35,0,0,1,2.16.71,6.8,6.8,0,0,0,7.77,0Zm0,5.74a3.37,3.37,0,0,1,2.16-.71h1.61V56.66H55.83A6.38,6.38,0,0,0,52,57.88a3.64,3.64,0,0,1-4.32,0,6.8,6.8,0,0,0-7.77,0,3.64,3.64,0,0,1-4.32,0,6.38,6.38,0,0,0-3.88-1.22H30.05v3.21h1.61a3.37,3.37,0,0,1,2.16.71,6.78,6.78,0,0,0,7.76,0,3.39,3.39,0,0,1,2.16-.71,3.35,3.35,0,0,1,2.16.71,6.8,6.8,0,0,0,7.77,0Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100pc md-w-25pc">
+                <div class="m-3 p-5 br-8 bg-white overflow-hidden">
+                    <div class="p-3">
+                        <h3 class="indigo">Pro</h3>
+                        <div class="black flex items-center">$<span class="fs-l5 lh-1">99</span>/mo</div>
+                    </div>
+                    <div class="p-3 black fw-400 fs-s1 lh-5">
+                        <div>
+                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                            <span class="opacity-50"> 5 user</span>
+                        </div>
+                        <div>
+                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                            <span class="opacity-50">10,000 visitors/month</span>
+                        </div>
+                        <div>
+                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                            <span class="opacity-50">3 website</span>
+                        </div>
+                        <div>
+                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                            <span class="opacity-50">24x7 support</span>
+                        </div>
+                        <div>
+                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                            <span class="opacity-50">third party integration</span>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <button class="button full bg-indigo white hover-opacity-100 hover-scale-up-1 ease-300">SIGN
+                            UP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- testimonials -->
+    <section class="p-10 md-p-l5">
+        <div id="slider-2">
+            <div class="px-3">
+                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
+                    <span class="fs-l5 lh-1 white opacity-10 absolute top-0 z--1">&#10077;</span>
+                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor </p>
+                    <div class="flex items-center my-5">
+                        <div class="block br-round border bc-black bw-4 w-l3 h-l3"><img class="br-round"
+                                src="https://randomuser.me/api/portraits/men/46.jpg" alt=""></div>
+                        <div class="ml-4 fs-s1">
+                            <div class="indigo-lightest">Mahnaz Farzin</div>
+                            <div class="indigo-lightest opacity-20">Product Manager, XYZ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3">
+                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
+                    <span class="fs-l5 lh-1 white opacity-10 absolute top-0 z--1">&#10077;</span>
+                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor </p>
+                    <div class="flex items-center my-5">
+                        <div class="block br-round border bc-black bw-4 w-l3 h-l3"><img class="br-round"
+                                src="https://randomuser.me/api/portraits/men/46.jpg" alt=""></div>
+                        <div class="ml-4 fs-s1">
+                            <div class="indigo-lightest">Mahnaz Farzin</div>
+                            <div class="indigo-lightest opacity-20">Product Manager, XYZ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3">
+                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
+                    <span class="fs-l5 lh-1 white opacity-10 absolute top-0 z--1">&#10077;</span>
+                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor </p>
+                    <div class="flex items-center my-5">
+                        <div class="block br-round border bc-black bw-4 w-l3 h-l3"><img class="br-round"
+                                src="https://randomuser.me/api/portraits/men/46.jpg" alt=""></div>
+                        <div class="ml-4 fs-s1">
+                            <div class="indigo-lightest">Mahnaz Farzin</div>
+                            <div class="indigo-lightest opacity-20">Product Manager, XYZ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-3">
+                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
+                    <span class="fs-l5 lh-1 white opacity-10 absolute top-0 z--1">&#10077;</span>
+                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider">Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor </p>
+                    <div class="flex items-center my-5">
+                        <div class="block br-round border bc-black bw-4 w-l3 h-l3"><img class="br-round"
+                                src="https://randomuser.me/api/portraits/men/46.jpg" alt=""></div>
+                        <div class="ml-4 fs-s1">
+                            <div class="indigo-lightest">Mahnaz Farzin</div>
+                            <div class="indigo-lightest opacity-20">Product Manager, XYZ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- featured blog -->
+    <section class="p-10 md-p-l10">
+        <div class="md-w-75pc">
+            <h2 class="white fs-l3 fw-900 lh-1">Lorem ipsum dolor sit amet, consectetur</h2>
+            <p class="indigo-lightest fw-600 fs-m1 opacity-50 my-5">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit, sed do eiusmod tempor </p>
+        </div>
+        <div class="relative w-100pc h-75vh bg-cover bg-b"
+            style="background-image: url(assets/images/nicholas-kwok-VBWWscZtszY-unsplash.jpg);">
+            <a href="#"
+                class="bg-white black px-5 py-3 absolute right-0 bottom-0 hover-bg-black hover-white ease-500 flex justify-center items-center after-arrow-right no-underline fs-m1"></a>
+        </div>
+
+    </section>
+
+    <!-- blog -->
+    <section class="p-0 md-p-5">
+        <div class="flex flex-wrap">
+            <div class="w-100pc md-w-33pc p-10">
+                <a href="#" class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
+                    <img class="w-100pc" src="assets/images/yoann-siloine-dyaxQ-aoGWY-unsplash.jpg" alt="">
+                    <p class="fw-600 white fs-m3 mt-3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed…
+                    </p>
+                    <div class="indigo fs-s3 italic after-arrow-right my-4">3 days ago by Jeff</div>
+                </a>
+            </div>
+            <div class="w-100pc md-w-33pc p-10">
+                <a href="#" class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
+                    <img class="w-100pc" src="assets/images/fabrice-villard-Jrl_UQcZqOc-unsplash.jpg" alt="">
+                    <p class="fw-600 white fs-m3 mt-3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed…
+                    </p>
+                    <div class="indigo fs-s3 italic after-arrow-right my-4">3 days ago by Jeff</div>
+                </a>
+            </div>
+            <div class="w-100pc md-w-33pc p-10">
+                <a href="#" class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
+                    <img class="w-100pc" src="assets/images/florian-klauer-mk7D-4UCfmg-unsplash.jpg" alt="">
+                    <p class="fw-600 white fs-m3 mt-3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed…
+                    </p>
+                    <div class="indigo fs-s3 italic after-arrow-right my-4">3 days ago by Jeff</div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- subscribe -->
+    <section class="p-10 md-p-l5">
+        <div class="br-8 bg-indigo-lightest-10 p-5 md-p-l5 flex flex-wrap md-justify-between md-items-center">
+            <div class="w-100pc md-w-33pc">
+                <h2 class="white fs-m4 fw-800">Try DoorDash Today</h2>
+                <p class="fw-600 indigo-lightest opacity-40">Get the first month discount & subscribe to our weekly
+                    news.</p>
+            </div>
+            <div class="w-100pc md-w-50pc">
+                <div class="flex my-5">
+                    <input type="text"
+                        class="input-lg flex-grow-1 bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 br-r-0"
+                        placeholder="Email Address">
+                    <button class="button-lg bg-indigo indigo-lightest fw-300 fs-s3 br-l-0">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="p-5 md-p-l5 bg-indigo-lightest-10">
+        <div class="flex flex-wrap">
+            <div class="md-w-25pc mb-10">
+                <canvas id="canvas" width="800" height="500"></canvas>
+                <div class="white opacity-70 fs-s2 mt-4 md-pr-10">
+                    <p>DoorDash is a technology company that connects people with the best of their neighborhoods across
+                        the US, Canada, Australia, Japan, and Germany. We enable local businesses to meet consumers’
+                        needs of ease and convenience, and, in turn, generate new ways for people to earn, work, and
+                        live.
+                    </p>
+                    <br>
+                    <p> By building the last-mile logistics infrastructure for local commerce, we’re fulfilling our
+                        mission to grow and empower local economies.</p>
+                </div>
+            </div>
+            <div class="w-100pc md-w-50pc">
+                <div class="flex justify-around">
+                    <div class="w-33pc md-px-10 mb-10">
+                        <h5 class="white">Get to Know Us</h5>
+                        <ul class="list-none mt-5 fs-s2">
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Company
+                                    Info</a></li>
+                            <li class="my-3"><a href="#"
+                                    class="white opacity-70 no-underline hover-underline">Careers</a>
+                            </li>
+                            <li class="my-3"><a href="#"
+                                    class="white opacity-70 no-underline hover-underline">Investors</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Company
+                                    Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-33pc md-px-10 mb-10">
+                        <h5 class="white">Top Cities</h5>
+                        <ul class="list-none mt-5 fs-s2">
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">New York
+                                    City</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Los
+                                    Angeles</a>
+                            </li>
+                            <li class="my-3"><a href="#"
+                                    class="white opacity-70 no-underline hover-underline">Toronto</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Chicago</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Houston</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Brooklyn</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">San Diego</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Las Vegas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-33pc md-px-10 mb-10">
+                        <h5 class="white"></h5>
+                        <ul class="list-none mt-5 fs-s2">
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">San Francisco</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Los
+                                    Angeles</a>
+                            </li>
+                            <li class="my-3"><a href="#"
+                                    class="white opacity-70 no-underline hover-underline">Seattle</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Atlanta</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Vancouver, BC</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Miami</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">San Antonio</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Phoenix</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-33pc md-px-10 mb-10">
+                        <h5 class="white"></h5>
+                        <ul class="list-none mt-5 fs-s2">
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Denver</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Austin</a>
+                            </li>
+                            <li class="my-3"><a href="#"
+                                    class="white opacity-70 no-underline hover-underline">Washington, DC</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Dallas</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Melbourne</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Sydney</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Montreal</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">All Cities</a>
+                            </li>
+                        </ul>
+                    </div> 
+                    <div class="w-33pc md-px-10 mb-10">
+                        <h5 class="white">Top Cusinines Near You</h5>
+                        <ul class="list-none mt-5 fs-s2">
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Pizza Near Me</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Chinese Food Near Me</a>
+                            </li>
+                            <li class="my-3"><a href="#"
+                                    class="white opacity-70 no-underline hover-underline">Sushi Near Me</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Cafe Near Me</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Mexican Food Near Me</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Thai Food Near Me</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Lunch Near Me</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Seafood Near Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-33pc md-px-10 mb-10">
+                        <h5 class="white">Top Cusinines Near You</h5>
+                        <ul class="list-none mt-5 fs-s2">
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Indian Food Near Me</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Dessert Near Me</a>
+                            </li>
+                            <li class="my-3"><a href="#"
+                                    class="white opacity-70 no-underline hover-underline">Burgers Near Me</a></li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Asian Food Near Me</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Italian Food Near Me</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Vegan Food Near Me</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Sandwiches Near Me</a>
+                            </li>
+                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Restaurants Near Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100pc md-w-25pc">
+                <div class="flex w-75pc md-w-100pc mx-auto">
+                    <input type="text"
+                        class="input flex-grow-1 bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 br-r-0"
+                        placeholder="Email Address">
+                    <button class="button bg-indigo indigo-lightest fw-300 fs-s3 br-l-0">Start</button>
+                </div>
+                <div class="flex justify-around my-8">
+                    <a href="#" class="relative p-5 bg-indigo br-round white hover-scale-up-1 ease-400"><i
+                            class="fab fa-instagram" class="absolute-center h-4"></i></a>
+                    <a href="#" class="relative p-5 bg-indigo br-round white hover-scale-up-1 ease-400"><i
+                            data-feather="facebook" class="absolute-center h-4"></i></a>
+                    <a href="#" class="relative p-5 bg-indigo br-round white hover-scale-up-1 ease-400"><i
+                            data-feather="instagram" class="absolute-center h-4"></i></a>
+                </div>
+                <div><a aria-label="Download on the App Store" data-testid="AppStoreButton"
+                        href="https://app.adjust.com/bo0s4gx?engagement_type=fallback_click&amp;tracker_limit=100000"
+                        class="sc-44791602-14 jVRDhf">
+                        <div class="sc-44791602-15 sHLjI"><svg height="48px" width="144px" fill="#ffffff" x="0px"
+                                y="0px" viewBox="0 0 131 44" aria-hidden="true">
+                                <path
+                                    d="M95.752,9.966l0.07,0.861h0.036c0.259-0.448,0.883-0.99,1.838-0.99c1.002,0,2.039,0.648,2.039,2.463v3.406 h-1.45v-3.242c0-0.825-0.307-1.45-1.096-1.45c-0.578,0-0.978,0.413-1.132,0.849c-0.047,0.118-0.07,0.295-0.07,0.46v3.383h-1.45 v-4.031c0-0.661-0.024-1.214-0.047-1.709H95.752z">
+                                </path>
+                                <rect x="74.588" y="7.338" width="1.449" height="8.368"></rect>
+                                <path
+                                    d="M54.52,7.573c0.495,0,0.802,0.342,0.813,0.79c0,0.424-0.318,0.778-0.825,0.778 c-0.484,0-0.801-0.354-0.801-0.778C53.707,7.916,54.036,7.573,54.52,7.573z">
+                                </path>
+                                <rect x="53.789" y="9.966" width="1.449" height="5.74"></rect>
+                                <path
+                                    d="M43.707,15.706H42.28l-2.133-5.74h1.568l0.93,2.911c0.165,0.507,0.283,0.967,0.389,1.438h0.036 c0.105-0.472,0.236-0.92,0.389-1.438l0.92-2.911h1.521L43.707,15.706z">
+                                </path>
+                                <rect x="57.515" y="7.338" width="1.449" height="8.368"></rect>
+                                <path
+                                    d="M82.795,33.559c-1.012,0.903-2.413,1.351-4.211,1.351c-1.666,0-2.999-0.322-4.005-0.961l0.575-2.063 c1.085,0.639,2.276,0.963,3.572,0.963c0.937,0,1.661-0.213,2.181-0.63c0.517-0.419,0.777-0.98,0.777-1.692 c0-0.618-0.214-1.146-0.64-1.576c-0.432-0.428-1.137-0.822-2.132-1.192c-2.703-1.006-4.057-2.482-4.057-4.422 c0-1.269,0.472-2.311,1.429-3.121c0.955-0.808,2.22-1.214,3.797-1.214c1.405,0,2.575,0.246,3.509,0.732l-0.625,2.018 c-0.871-0.472-1.861-0.712-2.965-0.712c-0.873,0-1.558,0.222-2.05,0.639c-0.411,0.388-0.618,0.854-0.618,1.403 c0,0.607,0.237,1.113,0.71,1.517c0.414,0.365,1.163,0.761,2.245,1.188c1.334,0.531,2.309,1.162,2.938,1.882 c0.625,0.718,0.94,1.611,0.94,2.679C84.165,31.665,83.705,32.738,82.795,33.559z">
+                                </path>
+                                <path
+                                    d="M91.524,25.395h-2.733v5.417c0,1.374,0.485,2.056,1.449,2.056c0.443,0,0.807-0.033,1.099-0.108l0.07,1.876 c-0.49,0.183-1.131,0.276-1.926,0.276c-0.973,0-1.743-0.294-2.291-0.894c-0.555-0.593-0.829-1.596-0.829-3.002v-5.621h-1.626V23.54 h1.626V21.5l2.428-0.733v2.773h2.733V25.395z">
+                                </path>
+                                <path
+                                    d="M104.242,9.966h0.813V8.893l1.427-0.401v1.474h1.378v1.084h-1.378v2.534c0,0.708,0.188,1.061,0.742,1.061 c0.259,0,0.401-0.012,0.566-0.059l0.024,1.096c-0.213,0.082-0.601,0.154-1.049,0.154c-0.542,0-0.979-0.177-1.25-0.472 c-0.318-0.33-0.46-0.861-0.46-1.615V11.05h-0.813V9.966z">
+                                </path>
+                                <path
+                                    d="M110.598,25.718c-0.244-0.044-0.506-0.063-0.78-0.063c-0.871,0-1.542,0.329-2.017,0.984 c-0.414,0.582-0.619,1.306-0.619,2.199v5.847h-2.476v-7.639c0-1.277-0.022-2.447-0.066-3.505h2.155l0.092,2.133h0.068 c0.258-0.731,0.669-1.322,1.238-1.762c0.551-0.402,1.149-0.595,1.791-0.595c0.227,0,0.435,0.012,0.615,0.042V25.718z">
+                                </path>
+                                <path
+                                    d="M110.974,12.264v3.442h-1.449V7.338h1.449v3.406h0.024c0.177-0.271,0.425-0.495,0.719-0.648 c0.295-0.166,0.636-0.26,1.002-0.26c0.978,0,2.004,0.648,2.004,2.487v3.383h-1.45v-3.229c0-0.825-0.307-1.462-1.108-1.462 c-0.566,0-0.967,0.378-1.131,0.814C110.986,11.958,110.974,12.111,110.974,12.264z">
+                                </path>
+                                <path
+                                    d="M37.151,7.762H35.3l-2.547,7.944h1.497l0.684-2.251h2.511l0.718,2.251h1.567L37.151,7.762z M35.171,12.359 l0.612-1.957c0.13-0.472,0.26-1.025,0.377-1.485h0.025c0.118,0.459,0.247,1.001,0.401,1.485l0.624,1.957H35.171z">
+                                </path>
+                                <path
+                                    d="M56.617,24.873c-0.884-1.042-1.978-1.558-3.293-1.558c-1.684,0-2.935,0.664-3.765,1.99h-0.043L49.38,23.54 h-2.178c0.063,1.252,0.095,2.47,0.095,3.662v12.001h2.475v-5.852c0.644,1.059,1.702,1.585,3.181,1.585 c1.366,0,2.514-0.489,3.434-1.464c1.033-1.103,1.548-2.595,1.548-4.496C57.934,27.282,57.493,25.911,56.617,24.873z M54.631,31.91 c-0.519,0.721-1.25,1.077-2.18,1.077c-0.794,0-1.44-0.281-1.936-0.834c-0.5-0.558-0.744-1.243-0.744-2.055v-1.855 c0-0.2,0.038-0.45,0.113-0.757c0.154-0.658,0.477-1.189,0.975-1.599c0.498-0.405,1.049-0.606,1.66-0.606 c0.903,0,1.62,0.374,2.158,1.104c0.49,0.701,0.731,1.597,0.731,2.679C55.408,30.245,55.151,31.192,54.631,31.91z">
+                                </path>
+                                <path
+                                    d="M101.728,24.944c-0.994-1.09-2.307-1.628-3.949-1.628c-1.697,0-3.042,0.543-4.044,1.648 c-1.001,1.099-1.5,2.515-1.5,4.241c0,1.648,0.483,3.022,1.453,4.105c0.969,1.086,2.277,1.627,3.915,1.627 c1.693,0,3.053-0.564,4.08-1.693c0.978-1.104,1.464-2.505,1.464-4.222C103.147,27.357,102.673,25.992,101.728,24.944z M99.888,31.725c-0.532,0.906-1.276,1.351-2.218,1.351c-0.968,0-1.717-0.44-2.247-1.324c-0.448-0.731-0.668-1.605-0.668-2.63 c0-1.053,0.219-1.942,0.668-2.671c0.517-0.885,1.275-1.325,2.265-1.325c0.964,0,1.703,0.44,2.23,1.325 c0.441,0.729,0.662,1.608,0.662,2.628S100.35,30.986,99.888,31.725z">
+                                </path>
+                                <path
+                                    d="M68.858,24.873c-0.879-1.042-1.976-1.558-3.291-1.558c-1.681,0-2.93,0.664-3.761,1.99h-0.043L61.62,23.54 h-2.173c0.06,1.252,0.092,2.47,0.092,3.662v12.001h2.477v-5.852c0.644,1.059,1.704,1.585,3.179,1.585 c1.369,0,2.512-0.489,3.435-1.464c1.033-1.103,1.548-2.595,1.548-4.496C70.177,27.282,69.739,25.911,68.858,24.873z M66.876,31.91 c-0.52,0.721-1.245,1.077-2.182,1.077c-0.791,0-1.438-0.281-1.934-0.834c-0.499-0.558-0.744-1.243-0.744-2.055v-1.855 c0-0.2,0.036-0.45,0.112-0.757c0.154-0.658,0.48-1.189,0.977-1.599c0.499-0.405,1.047-0.606,1.661-0.606 c0.901,0,1.62,0.374,2.159,1.104c0.488,0.701,0.734,1.597,0.734,2.679C67.658,30.245,67.397,31.192,66.876,31.91z">
+                                </path>
+                                <path
+                                    d="M40.783,19.231h-3.076l-4.971,15.453h2.565l1.378-4.536h5.023l1.443,4.536h2.639L40.783,19.231z M37.113,28.243 l1.284-4.036c0.339-1.286,0.581-2.255,0.736-2.912h0.043c0.38,1.526,0.643,2.497,0.784,2.912l1.302,4.036H37.113z">
+                                </path>
+                                <path
+                                    d="M121.284,28.587c0-1.391-0.331-2.562-0.986-3.513c-0.823-1.191-2.036-1.786-3.646-1.786 c-1.633,0-2.932,0.595-3.9,1.786c-0.915,1.121-1.376,2.516-1.376,4.201c0,1.711,0.497,3.075,1.482,4.091 c0.986,1.016,2.343,1.522,4.066,1.522c1.441,0,2.689-0.224,3.74-0.686l-0.39-1.722c-0.902,0.357-1.901,0.532-3.004,0.532 c-0.995,0-1.804-0.26-2.429-0.781c-0.69-0.58-1.05-1.418-1.079-2.517h7.43C121.252,29.402,121.284,29.027,121.284,28.587z M113.764,27.941c0.074-0.745,0.321-1.388,0.734-1.922c0.506-0.668,1.163-1.014,1.971-1.014c0.885,0,1.544,0.349,1.974,1.034 c0.335,0.538,0.492,1.17,0.479,1.901H113.764z">
+                                </path>
+                                <path
+                                    d="M70.542,9.837c-0.861,0-1.486,0.365-1.839,0.919h-0.024V7.338h-1.449v6.753c0,0.59-0.024,1.226-0.047,1.615 h1.238l0.07-0.86h0.024c0.412,0.708,1.072,0.99,1.815,0.99c1.297,0,2.605-1.025,2.605-3.089 C72.946,11.003,71.945,9.837,70.542,9.837z M70,14.692c-0.624,0-1.131-0.425-1.284-1.013c-0.024-0.106-0.036-0.224-0.036-0.342 v-0.931c0-0.142,0.024-0.271,0.048-0.378c0.153-0.636,0.695-1.061,1.284-1.061c0.966,0,1.449,0.825,1.449,1.839 C71.461,13.973,70.908,14.692,70,14.692z">
+                                </path>
+                                <path
+                                    d="M83.005,12.63c0-1.261-0.614-2.794-2.475-2.794c-1.839,0-2.805,1.497-2.805,3.089 c0,1.756,1.096,2.899,2.958,2.899c0.825,0,1.508-0.153,2.003-0.365l-0.212-0.991c-0.448,0.154-0.919,0.259-1.591,0.259 c-0.931,0-1.733-0.448-1.768-1.485h3.842C82.981,13.114,83.005,12.901,83.005,12.63z M79.115,12.229 c0.059-0.589,0.436-1.403,1.332-1.403c0.966,0,1.202,0.872,1.19,1.403H79.115z">
+                                </path>
+                                <path
+                                    d="M90.221,9.837c-1.733,0-2.97,1.155-2.97,3.041c0,1.85,1.261,2.958,2.876,2.958c1.461,0,2.947-0.943,2.947-3.053 C93.074,11.039,91.93,9.837,90.221,9.837z M90.175,14.787c-0.873,0-1.427-0.837-1.427-1.945c0-0.955,0.412-1.956,1.438-1.956 c0.99,0,1.391,1.037,1.391,1.933C91.577,13.985,91,14.787,90.175,14.787z">
+                                </path>
+                                <path
+                                    d="M65.708,14.327v-2.063c0-1.261-0.531-2.428-2.37-2.428c-0.907,0-1.65,0.247-2.074,0.507l0.283,0.943 c0.389-0.247,0.978-0.425,1.544-0.425c1.013,0,1.166,0.625,1.166,1.002v0.094c-2.122-0.012-3.406,0.731-3.406,2.169 c0,0.872,0.648,1.709,1.804,1.709c0.754,0,1.356-0.319,1.697-0.766h0.035l0.106,0.636h1.308 C65.731,15.353,65.708,14.846,65.708,14.327z M64.293,13.69c0,0.106,0,0.213-0.035,0.319c-0.141,0.413-0.554,0.79-1.144,0.79 c-0.459,0-0.825-0.26-0.825-0.825c0-0.872,0.978-1.084,2.003-1.072V13.69z">
+                                </path>
+                                <path
+                                    d="M121.231,12.63c0-1.261-0.614-2.794-2.475-2.794c-1.839,0-2.805,1.497-2.805,3.089 c0,1.756,1.096,2.899,2.958,2.899c0.825,0,1.508-0.153,2.003-0.365l-0.212-0.991c-0.447,0.154-0.919,0.259-1.591,0.259 c-0.931,0-1.733-0.448-1.768-1.485h3.842C121.207,13.114,121.231,12.901,121.231,12.63z M117.341,12.229 c0.059-0.589,0.436-1.403,1.332-1.403c0.966,0,1.203,0.872,1.19,1.403H117.341z">
+                                </path>
+                                <path
+                                    d="M51.547,14.327v-2.063c0-1.261-0.531-2.428-2.369-2.428c-0.908,0-1.651,0.247-2.075,0.507l0.283,0.943 c0.389-0.247,0.978-0.425,1.544-0.425c1.013,0,1.167,0.625,1.167,1.002v0.094c-2.122-0.012-3.406,0.731-3.406,2.169 c0,0.872,0.648,1.709,1.803,1.709c0.754,0,1.355-0.319,1.697-0.766h0.035l0.106,0.636h1.309 C51.57,15.353,51.547,14.846,51.547,14.327z M50.132,13.69c0,0.106,0,0.213-0.034,0.319c-0.142,0.413-0.555,0.79-1.144,0.79 c-0.46,0-0.825-0.26-0.825-0.825c0-0.872,0.978-1.084,2.003-1.072V13.69z">
+                                </path>
+                                <path
+                                    d="M23.106,7.376H12.221c-1.4,0-2.542,1.138-2.542,2.537v24.19c0,1.4,1.141,2.534,2.542,2.534h10.886 c1.399,0,2.54-1.135,2.54-2.534V9.913C25.646,8.514,24.505,7.376,23.106,7.376z M16.4,9.947h2.524c0.165,0,0.3,0.135,0.3,0.302 c0,0.158-0.135,0.294-0.3,0.294H16.4c-0.16,0-0.298-0.136-0.298-0.294C16.102,10.082,16.24,9.947,16.4,9.947z M17.662,35.289 c-0.722,0-1.311-0.589-1.311-1.312c0-0.725,0.589-1.315,1.311-1.315c0.726,0,1.313,0.591,1.313,1.315 C18.974,34.7,18.387,35.289,17.662,35.289z M24.103,31.536h-12.88V12.487h12.88V31.536z">
+                                </path>
+                            </svg></div>
+                    </a><a aria-label="Download on the Google Play Store" data-testid="GoogleStoreButton"
+                        href="https://7wmw.adj.st/?adjust_t=9ick0eu&amp;adjust_campaign=CX_US_DR_WB_DS_ACQ_CUSXXX__+FooterWeb&amp;adjust_deeplink=doordash%3A%2F%2F&amp;adjust_fallback=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.dd.doordash&amp;adj_redirect_macos=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.dd.doordash"
+                        class="sc-44791602-14 jVRDhf">
+                        <div class="sc-44791602-15 sHLjI"><svg height="48px" width="144px" fill="#ffffff" x="0px"
+                                y="0px" viewBox="0 0 139 44" aria-hidden="true">
+                                <path
+                                    d="M45.616,12.01h-0.952c0-0.131-0.09-0.502-0.271-1.112H43.02c-0.186,0.601-0.28,0.972-0.28,1.112h-0.895 c0-0.077,0.231-0.712,0.694-1.903c0.463-1.192,0.695-1.848,0.695-1.969h1.124c0,0.113,0.21,0.76,0.629,1.941 C45.406,11.259,45.616,11.903,45.616,12.01z M44.242,10.33c-0.339-1.023-0.509-1.576-0.509-1.66h-0.048 c0,0.077-0.175,0.63-0.526,1.66H44.242z">
+                                </path>
+                                <path
+                                    d="M49.451,12.01h-0.735c0-0.081-0.273-0.51-0.818-1.288c-0.571-0.819-0.896-1.379-0.976-1.68h-0.048 c0.049,0.434,0.074,0.827,0.074,1.178c0,0.49,0.014,1.087,0.042,1.79H46.26c0.03-0.615,0.045-1.29,0.045-2.025 c0-0.724-0.015-1.339-0.045-1.847h0.883c0,0.105,0.245,0.524,0.735,1.258c0.521,0.779,0.821,1.308,0.898,1.585h0.045 c-0.048-0.442-0.071-0.839-0.071-1.19c0-0.537-0.014-1.088-0.042-1.654h0.744c-0.028,0.492-0.042,1.107-0.042,1.847 C49.409,10.731,49.423,11.406,49.451,12.01z">
+                                </path>
+                                <path
+                                    d="M53.762,9.94c0,0.563-0.181,1.055-0.541,1.475c-0.361,0.42-0.867,0.631-1.517,0.631 c-0.293,0-0.698-0.012-1.213-0.036c0.026-0.599,0.039-1.274,0.039-2.025c0-0.722-0.013-1.337-0.039-1.847h0.52 c0.085,0,0.212-0.003,0.381-0.009c0.168-0.006,0.278-0.009,0.33-0.009c0.716,0,1.235,0.178,1.557,0.535 C53.601,9.012,53.762,9.441,53.762,9.94z M52.95,10.068c0-0.381-0.111-0.701-0.333-0.962c-0.222-0.261-0.561-0.391-1.017-0.391 c-0.085,0-0.202,0.009-0.351,0.027c0.02,0.397,0.03,0.811,0.03,1.243c0,0.474,0.01,0.944,0.03,1.41 c0.129,0.026,0.258,0.039,0.387,0.039c0.426,0,0.742-0.132,0.947-0.397C52.847,10.772,52.95,10.449,52.95,10.068z">
+                                </path>
+                                <path
+                                    d="M57.737,12.01h-0.88c-0.23-0.702-0.407-1.135-0.529-1.3c-0.123-0.164-0.321-0.247-0.595-0.247 c-0.115,0-0.225,0.001-0.33,0.003c0,0.51,0.009,1.024,0.027,1.544h-0.827c0.026-0.599,0.039-1.274,0.039-2.025 c0-0.722-0.013-1.337-0.039-1.847h0.515c0.06,0,0.184-0.003,0.373-0.009c0.189-0.006,0.364-0.009,0.525-0.009 c0.91,0,1.365,0.311,1.365,0.934c0,0.494-0.26,0.838-0.779,1.032v0.045c0.2,0.056,0.376,0.212,0.526,0.468 C57.278,10.856,57.481,11.326,57.737,12.01z M56.621,9.274c0-0.394-0.254-0.592-0.761-0.592c-0.186,0-0.351,0.014-0.494,0.042 c0.022,0.307,0.033,0.708,0.033,1.202c0.109,0.004,0.201,0.006,0.277,0.006C56.306,9.932,56.621,9.713,56.621,9.274z">
+                                </path>
+                                <path
+                                    d="M62,10.003c0,0.609-0.186,1.113-0.559,1.514c-0.373,0.401-0.834,0.601-1.383,0.601 c-0.523,0-0.962-0.184-1.315-0.552c-0.353-0.368-0.529-0.835-0.529-1.402c0-0.609,0.186-1.113,0.559-1.514 c0.373-0.4,0.834-0.601,1.383-0.601c0.523,0,0.962,0.184,1.315,0.55C61.823,8.966,62,9.434,62,10.003z M61.179,10.089 c0-0.414-0.106-0.75-0.318-1.008c-0.212-0.258-0.474-0.387-0.785-0.387c-0.29,0-0.535,0.13-0.738,0.39 c-0.202,0.26-0.303,0.588-0.303,0.984c0,0.412,0.107,0.748,0.32,1.007c0.213,0.259,0.474,0.388,0.784,0.388 c0.289,0,0.535-0.13,0.738-0.391C61.078,10.811,61.179,10.484,61.179,10.089z">
+                                </path>
+                                <path
+                                    d="M63.682,12.01H62.84c0.026-0.615,0.039-1.29,0.039-2.025c0-0.724-0.013-1.339-0.039-1.847h0.842 c-0.026,0.5-0.039,1.115-0.039,1.847C63.643,10.733,63.656,11.408,63.682,12.01z">
+                                </path>
+                                <path
+                                    d="M67.993,9.94c0,0.563-0.181,1.055-0.541,1.475c-0.361,0.42-0.867,0.631-1.517,0.631 c-0.294,0-0.698-0.012-1.213-0.036c0.026-0.599,0.039-1.274,0.039-2.025c0-0.722-0.013-1.337-0.039-1.847h0.52 c0.085,0,0.212-0.003,0.381-0.009s0.278-0.009,0.33-0.009c0.716,0,1.235,0.178,1.557,0.535C67.831,9.012,67.993,9.441,67.993,9.94z M67.181,10.068c0-0.381-0.111-0.701-0.333-0.962c-0.222-0.261-0.561-0.391-1.017-0.391c-0.085,0-0.202,0.009-0.351,0.027 c0.02,0.397,0.03,0.811,0.03,1.243c0,0.474,0.01,0.944,0.03,1.41c0.129,0.026,0.258,0.039,0.387,0.039 c0.426,0,0.742-0.132,0.947-0.397C67.078,10.772,67.181,10.449,67.181,10.068z">
+                                </path>
+                                <path
+                                    d="M73.712,12.01H72.76c0-0.131-0.09-0.502-0.271-1.112h-1.374c-0.186,0.601-0.28,0.972-0.28,1.112H69.94 c0-0.077,0.231-0.712,0.694-1.903c0.463-1.192,0.694-1.848,0.694-1.969h1.124c0,0.113,0.21,0.76,0.629,1.941 C73.502,11.259,73.712,11.903,73.712,12.01z M72.337,10.33c-0.339-1.023-0.509-1.576-0.509-1.66h-0.048 c0,0.077-0.175,0.63-0.526,1.66H72.337z">
+                                </path>
+                                <path
+                                    d="M77.181,9.152c0,0.474-0.176,0.824-0.528,1.05c-0.352,0.226-0.784,0.339-1.295,0.339 c-0.093,0-0.159-0.002-0.199-0.006c0,0.373,0.011,0.865,0.033,1.475h-0.836c0.026-0.573,0.039-1.248,0.039-2.025 c0-0.714-0.013-1.329-0.039-1.847h0.518c0.073,0,0.214-0.003,0.422-0.009s0.389-0.009,0.541-0.009c0.377,0,0.695,0.085,0.955,0.256 C77.051,8.547,77.181,8.805,77.181,9.152z M76.413,9.316c0-0.424-0.281-0.637-0.845-0.637c-0.141,0-0.29,0.015-0.446,0.045 c0.022,0.375,0.033,0.799,0.033,1.273c0.049,0.004,0.107,0.006,0.172,0.006C76.052,10.003,76.413,9.774,76.413,9.316z">
+                                </path>
+                                <path
+                                    d="M80.748,9.152c0,0.474-0.176,0.824-0.528,1.05c-0.352,0.226-0.784,0.339-1.295,0.339 c-0.093,0-0.159-0.002-0.199-0.006c0,0.373,0.011,0.865,0.033,1.475h-0.836c0.026-0.573,0.039-1.248,0.039-2.025 c0-0.714-0.013-1.329-0.039-1.847h0.518c0.073,0,0.214-0.003,0.422-0.009s0.389-0.009,0.541-0.009c0.377,0,0.695,0.085,0.955,0.256 C80.618,8.547,80.748,8.805,80.748,9.152z M79.981,9.316c0-0.424-0.282-0.637-0.845-0.637c-0.141,0-0.29,0.015-0.446,0.045 c0.022,0.375,0.033,0.799,0.033,1.273c0.049,0.004,0.107,0.006,0.172,0.006C79.619,10.003,79.981,9.774,79.981,9.316z">
+                                </path>
+                                <path
+                                    d="M86.58,10.003c0,0.609-0.186,1.113-0.559,1.514c-0.373,0.401-0.834,0.601-1.383,0.601 c-0.523,0-0.962-0.184-1.315-0.552c-0.353-0.368-0.529-0.835-0.529-1.402c0-0.609,0.186-1.113,0.559-1.514 c0.373-0.4,0.834-0.601,1.383-0.601c0.523,0,0.962,0.184,1.315,0.55C86.403,8.966,86.58,9.434,86.58,10.003z M85.759,10.089 c0-0.414-0.106-0.75-0.318-1.008c-0.212-0.258-0.474-0.387-0.785-0.387c-0.29,0-0.535,0.13-0.738,0.39 c-0.202,0.26-0.303,0.588-0.303,0.984c0,0.412,0.106,0.748,0.32,1.007c0.213,0.259,0.474,0.388,0.783,0.388 c0.29,0,0.535-0.13,0.738-0.391C85.658,10.811,85.759,10.484,85.759,10.089z">
+                                </path>
+                                <path
+                                    d="M90.611,12.01h-0.735c0-0.081-0.273-0.51-0.818-1.288c-0.571-0.819-0.896-1.379-0.976-1.68h-0.048 c0.049,0.434,0.074,0.827,0.074,1.178c0,0.49,0.014,1.087,0.042,1.79H87.42c0.03-0.615,0.045-1.29,0.045-2.025 c0-0.724-0.015-1.339-0.045-1.847h0.883c0,0.105,0.245,0.524,0.735,1.258c0.522,0.779,0.821,1.308,0.898,1.585h0.045 c-0.048-0.442-0.071-0.839-0.071-1.19c0-0.537-0.014-1.088-0.042-1.654h0.744C90.583,8.63,90.57,9.246,90.57,9.985 C90.57,10.731,90.583,11.406,90.611,12.01z">
+                                </path>
+                                <path
+                                    d="M55.525,24.417c0,1.922-0.57,3.454-1.71,4.593c-1.294,1.358-2.979,2.038-5.055,2.038 c-1.986,0-3.675-0.689-5.064-2.066c-1.391-1.377-2.085-3.085-2.085-5.122s0.694-3.744,2.085-5.122 c1.389-1.377,3.078-2.066,5.064-2.066c0.987,0,1.928,0.192,2.825,0.576c0.896,0.384,1.615,0.897,2.152,1.538l-1.211,1.211 c-0.91-1.089-2.166-1.634-3.767-1.634c-1.448,0-2.7,0.509-3.757,1.529c-1.057,1.018-1.586,2.342-1.586,3.968 c0,1.628,0.529,2.95,1.586,3.969c1.057,1.018,2.309,1.528,3.757,1.528c1.538,0,2.819-0.513,3.844-1.538 c0.666-0.667,1.05-1.596,1.153-2.787H48.76v-1.653h6.669C55.493,23.738,55.525,24.084,55.525,24.417z">
+                                </path>
+                                <path
+                                    d="M57.62,22.447c0.91-0.955,2.069-1.432,3.479-1.432c1.409,0,2.568,0.477,3.479,1.432 c0.91,0.955,1.364,2.149,1.364,3.584c0,1.435-0.454,2.63-1.364,3.584c-0.91,0.955-2.07,1.432-3.479,1.432 c-1.41,0-2.569-0.477-3.479-1.432c-0.91-0.955-1.365-2.149-1.365-3.584C56.255,24.596,56.71,23.402,57.62,22.447z M58.937,28.501 c0.608,0.621,1.329,0.933,2.162,0.933c0.833,0,1.553-0.311,2.162-0.933c0.608-0.621,0.913-1.444,0.913-2.469 c0-1.025-0.305-1.848-0.913-2.47c-0.609-0.621-1.33-0.932-2.162-0.932c-0.834,0-1.554,0.31-2.162,0.932 c-0.609,0.622-0.913,1.445-0.913,2.47C58.024,27.057,58.327,27.88,58.937,28.501z">
+                                </path>
+                                <path
+                                    d="M67.903,22.447c0.91-0.955,2.069-1.432,3.479-1.432c1.409,0,2.568,0.477,3.479,1.432 c0.91,0.955,1.364,2.149,1.364,3.584c0,1.435-0.454,2.63-1.364,3.584c-0.91,0.955-2.07,1.432-3.479,1.432 c-1.41,0-2.569-0.477-3.479-1.432c-0.91-0.955-1.365-2.149-1.365-3.584C66.538,24.596,66.993,23.402,67.903,22.447z M69.219,28.501 c0.608,0.621,1.329,0.933,2.162,0.933c0.833,0,1.553-0.311,2.162-0.933c0.608-0.621,0.913-1.444,0.913-2.469 c0-1.025-0.305-1.848-0.913-2.47c-0.609-0.621-1.33-0.932-2.162-0.932c-0.833,0-1.554,0.31-2.162,0.932 c-0.609,0.622-0.913,1.445-0.913,2.47C68.306,27.057,68.61,27.88,69.219,28.501z">
+                                </path>
+                                <path
+                                    d="M81.453,35.199c-1.115,0-2.025-0.278-2.73-0.836c-0.705-0.558-1.211-1.195-1.518-1.913l1.615-0.672 c0.179,0.512,0.509,0.942,0.99,1.287c0.48,0.346,1.027,0.519,1.643,0.519c0.973,0,1.739-0.292,2.297-0.874 c0.558-0.583,0.836-1.374,0.836-2.373v-0.903h-0.077c-0.308,0.461-0.743,0.846-1.307,1.153c-0.564,0.308-1.199,0.462-1.903,0.462 c-1.217,0-2.268-0.481-3.152-1.442c-0.884-0.961-1.326-2.152-1.326-3.575c0-1.422,0.442-2.614,1.326-3.575 c0.884-0.96,1.935-1.441,3.152-1.441c0.704,0,1.339,0.154,1.903,0.461c0.563,0.308,0.999,0.692,1.307,1.154h0.077v-1.308h1.692 v8.937c0,1.615-0.468,2.841-1.403,3.681C83.939,34.779,82.798,35.199,81.453,35.199z M81.587,29.434 c0.833,0,1.541-0.308,2.124-0.923c0.583-0.615,0.874-1.442,0.874-2.479c0-1.038-0.291-1.864-0.874-2.479 c-0.583-0.616-1.291-0.923-2.124-0.923c-0.82,0-1.525,0.31-2.114,0.932c-0.589,0.622-0.884,1.445-0.884,2.47 c0,1.025,0.295,1.848,0.884,2.469C80.062,29.122,80.767,29.434,81.587,29.434z">
+                                </path>
+                                <path d="M89.716,30.74h-1.768V16.979h1.768V30.74z"></path>
+                                <path
+                                    d="M95.559,31.048c-1.422,0-2.579-0.474-3.469-1.423c-0.891-0.947-1.336-2.146-1.336-3.593 c0-1.371,0.432-2.55,1.298-3.537c0.865-0.986,1.97-1.48,3.315-1.48c1.397,0,2.514,0.455,3.354,1.365 c0.839,0.91,1.259,2.127,1.259,3.652l-0.019,0.327h-7.438c0.051,0.948,0.368,1.698,0.951,2.248c0.583,0.551,1.265,0.827,2.047,0.827 c1.268,0,2.127-0.539,2.576-1.614l1.575,0.653c-0.307,0.73-0.814,1.343-1.518,1.836C97.449,30.801,96.584,31.048,95.559,31.048z M98.096,24.898c-0.038-0.539-0.286-1.051-0.74-1.538c-0.455-0.487-1.132-0.73-2.028-0.73c-0.653,0-1.22,0.205-1.701,0.615 c-0.481,0.41-0.811,0.961-0.99,1.653H98.096z">
+                                </path>
+                                <path
+                                    d="M106.937,30.74h-1.769V16.979h4.69c1.166,0,2.175,0.388,3.027,1.163c0.852,0.776,1.278,1.753,1.278,2.931 c0,1.179-0.426,2.157-1.278,2.931c-0.852,0.775-1.861,1.163-3.027,1.163h-2.921V30.74z M106.937,23.476h2.96 c0.743,0,1.339-0.251,1.787-0.75c0.449-0.499,0.673-1.051,0.673-1.653c0-0.602-0.224-1.153-0.673-1.652 c-0.449-0.5-1.045-0.75-1.787-0.75h-2.96V23.476z">
+                                </path>
+                                <path d="M117.085,30.74h-1.768V16.979h1.768V30.74z"></path>
+                                <path
+                                    d="M121.639,31.048c-1,0-1.836-0.289-2.508-0.865c-0.673-0.576-1.01-1.339-1.01-2.287 c0-1.025,0.397-1.829,1.192-2.412c0.794-0.583,1.774-0.874,2.94-0.874c1.038,0,1.89,0.192,2.556,0.576v-0.269 c0-0.692-0.237-1.246-0.711-1.662c-0.474-0.417-1.057-0.625-1.749-0.625c-0.513,0-0.978,0.122-1.393,0.365 c-0.417,0.243-0.702,0.576-0.856,0.999l-1.614-0.692c0.218-0.563,0.647-1.086,1.288-1.566c0.64-0.481,1.486-0.721,2.537-0.721 c1.204,0,2.203,0.353,2.998,1.057c0.794,0.705,1.191,1.698,1.191,2.979v5.689h-1.691v-1.307h-0.076 C124.029,30.509,122.997,31.048,121.639,31.048z M121.927,29.434c0.73,0,1.393-0.273,1.99-0.817 c0.596-0.544,0.893-1.188,0.893-1.931c-0.499-0.41-1.249-0.615-2.248-0.615c-0.859,0-1.506,0.186-1.941,0.557 c-0.436,0.372-0.653,0.807-0.653,1.307c0,0.461,0.198,0.826,0.596,1.096C120.96,29.298,121.415,29.434,121.927,29.434z">
+                                </path>
+                                <path
+                                    d="M130.347,34.891h-1.826l2.191-4.747l-3.882-8.822h1.922l2.807,6.766h0.038l2.729-6.766h1.922L130.347,34.891z">
+                                </path>
+                                <path
+                                    d="M8.629,23.626c0-4.395,0.002-8.791-0.002-13.186C8.627,9.9,8.732,9.408,9.114,9 C9.262,8.842,9.369,8.8,9.552,8.985c2.958,3.018,5.922,6.029,8.886,9.04c1.92,1.95,3.838,3.901,5.765,5.844 c0.187,0.188,0.203,0.287,0.005,0.484c-4.714,4.687-9.424,9.379-14.121,14.082c-0.287,0.287-0.488,0.257-0.764,0.045 c-0.503-0.387-0.696-0.906-0.696-1.523c0.001-2.603-0.004-5.207-0.005-7.81c-0.001-1.841,0-3.681,0-5.522 C8.624,23.626,8.627,23.626,8.629,23.626z">
+                                </path>
+                                <path
+                                    d="M10.319,8.499c0.36-0.003,0.613,0.101,0.857,0.238c6.02,3.373,12.039,6.748,18.062,10.114 c0.277,0.155,0.271,0.241,0.057,0.451c-1.346,1.325-2.682,2.66-4.017,3.996c-0.144,0.144-0.232,0.228-0.425,0.031 c-4.789-4.884-9.586-9.762-14.381-14.641C10.434,8.648,10.401,8.599,10.319,8.499z">
+                                </path>
+                                <path
+                                    d="M11.666,38.324c4.37-4.417,8.742-8.83,13.101-13.257c0.271-0.275,0.396-0.238,0.639,0.014 c1.107,1.153,2.231,2.291,3.36,3.423c0.199,0.199,0.215,0.281-0.054,0.428c-5.609,3.07-11.214,6.15-16.819,9.227 C11.8,38.21,11.714,38.293,11.666,38.324z">
+                                </path>
+                                <path
+                                    d="M36.628,23.748c-0.019,0.495-0.253,0.843-0.606,1.104c-0.262,0.193-0.55,0.352-0.836,0.51 c-1.696,0.938-3.397,1.866-5.089,2.81c-0.228,0.127-0.364,0.122-0.553-0.074c-1.205-1.244-2.42-2.479-3.642-3.706 c-0.178-0.179-0.183-0.277,0-0.456c1.424-1.403,2.84-2.813,4.249-4.23c0.166-0.167,0.285-0.186,0.493-0.069 c1.675,0.949,3.358,1.885,5.038,2.827C36.201,22.756,36.605,23.133,36.628,23.748z">
+                                </path>
+                            </svg></div>
+                    </a></div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/chat.js"></script>
+</body>
+
+</html>
