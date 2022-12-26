@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEC FORM-4</title>
+    <link rel="icon" type="image/x-icon" href="IMAGES/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="JS/scripts.js"></script>
+    <script src="sweetalert/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+    <div id="allContent">
+        <header id="headerInfo">
+            <div id="topLeftCont">
+                <div id="form4Lab" class="FormName">FORM 4</div>
+                <div id="alCheck">
+                    <label class="userInput" id="obligationCheck" style="display: inline-block;"></label>
+                    <div style="padding:10px; margin-top: 5%; width: 60%; display: inline-block;" class="SmallFormText">
+                        Check this box
+                        if no longer
+                        subject to Section 16. Form
+                        4 or Form 5
+                        obligations<br> may continue.
+                        <i>See</i>
+                        Instruction 1(b).
+                    </div>
+                </div>
+            </div>
+            <div id="form4mid">
+                <div>
+                    <span class="FormTitle">UNITED STATES SECURITIES AND EXCHANGE COMMISSION</span>
+                    <span class="MedSmallFormText">Washington, D.C. 20549</span>
+                    <span style="margin-top: 2%;" class="FormTitle">STATEMENT OF CHANGES IN BENEFICIAL OWNERSHIP</span>
+                    <span style="margin-top: 2%;" class="MedSmallFormText">Filed pursuant to Section 16(a) of the
+                        Securities Exchange
+                        Act of 1934</span>
+                    <span class="MedSmallFormText">or Section 30(h) of the Investment Company Act
+                        of 1940</span>
+                </div>
+            </div>
+            <div id="topRightCont">
+                <div id="ombApproval">
+                    <div id="ombTitleDiv">
+                        <span class="FormTextC">OMB APPROVAL</span>
+                    </div>
+                    <div id="ombContent">
+                        <div id="ombContentL">
+                            <span class="SmallFormTextOmb">OMB Number:</span>
+                            <span class="SmallFormTextOmb">Estimated average burden</span>
+                            <span class="SmallFormTextOmb">hours per response:</span>
+                        </div>
+                        <div id="ombContentR">
+                            <span class="SmallFormTextR">3235-0287</span>
+                            <span class="SmallFormTextR" style="margin-top: 10%;">0.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>   
+            <div id="main">
+                <div id="tableZero">
+                    <div id="cellLeft">
+                        <label>1. Name and Address of Reporting Person*</label>
+                        <div id="divName">
+                            <div class="namePart">
+                                <label class="userInputV2" id="lastnamep"></label>
+                                <label>Last</label>
+                            </div>
+                            <div class="namePart">
+                                <label class="userInputV2" id="middlenamep"></label>
+                                <label >Middle</label>
+                            </div>
+                            <div class="namePart">
+                                <label class="userInputV2" id="firstnamep"></label>
+                                <label>First</label>
+                            </div>
+                        </div>
+                        <div id="divStreet">
+                            <label class="userInputV2" id="streetp"></label>
+                            <label>Street</label>
+                        </div>
+                        <div id="divCity">
+                            <div class="cityPart">
+                                <label class="userInputV2" id="cityp"></label>
+                                <label>City</label>
+                            </div>
+                            <div class="cityPart">
+                                <label class="userInputV2" id="statep"></label>
+                                <label>State</label>
+                            </div>
+                            <div class="cityPart">
+                                <label class="userInputV2" id="zipp"></label>
+                                <label>Zip</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cellMiddle">
+                        <div id="midTop">
+                            <label>2. Issuer Name <strong>and</strong> Ticker or Trading Symbol</label>
+                            <div id="midWrap">
+                                <div id="midL">
+                                    <label class="userInputV2" id="issuerNameInputp"></label>
+                                    <label>Issuer Name</label>
+                                </div>
+                                <div id="midR">
+                                    <label class="userInputV2" id="tickerp"></label>
+                                    <label>Ticker</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="midMid">
+                            <label style="display:block; margin-bottom:20px;">3. Date of Earliest Transaction
+                                (Day/Month/Year)</label>
+                                <label class="userInput" id="date1p"></label>
+                        </div>
+                        <div id="midBot">
+                            <label style="display:block; margin-bottom:20px;">4. If Amendment, Date of Original Filed
+                                (Day/Month/Year)</label>
+                            <label class="userInput" id="date2p"></label>
+                        </div>
+                    </div>
+
+                    <div id="topRightP">
+                        <div id="cellUpperP">
+                            <label>5. Relationship of Reporting Person(s) to Issuer (Check all aplicable)</label>
+                            <div id="rightWrap">
+                                <div id="leftR">
+                                    <div id="dirDiv">
+                                        <label class="userInput" id="directorp">&nbsp;&nbsp;</label>
+                                        <label id="dirLabel">Director</label>
+                                    </div>
+                                    <label class="userInput" id="officerp">&nbsp;&nbsp;</label>
+                                    <label id="offLabel">Officer</label>
+                                </div>
+                                <div id="rightR">
+                                    <div id="tenODiv">
+                                        <label class="userInput" id="tenOwnerp">&nbsp;&nbsp;</label>
+                                        <label>10% Owner</label>
+                                    </div>
+                                    <div>
+                                        <label class="userInput" id="customPersonp">&nbsp;&nbsp;</label>
+                                        <label>Other (specify below)</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="cellBottomP">
+                            <label style="display:block; margin-bottom: 20px;">6. Individual or Joint/Group Filing
+                                (Check Applicable Line)</label>
+                            <div style="display:block; margin-bottom: 20px;">
+                                <label class="userInput" id="onePerp">&nbsp;&nbsp;</label>
+                                <label>Form filed by One Reporting Person</label>
+                            </div>
+                            <div>
+                                <label class="userInput" id="moreThanOnep">&nbsp;&nbsp;</label>
+                                <label>Form filed by More than One Reporting Person</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="titleBottom">
+                    <h3>Table I - Non-Derivative Securities Acquired, Disposed of, or Beneficially Owned</h3>
+                </div>
+                <table id="tableOne">
+                    <tr>
+                        <th style="width:36%;" rowspan="2">1. Title of Security (Instr. 3)</th>
+                        <th style="width:6%;" rowspan="2">2. Transaction Date (Day/Month/Year)</th>
+                        <th style="width:5%;" rowspan="2">2A. Deemed Execution Date, if any (Day/Month/Year)</th>
+                        <th style="width:7%;" colspan="2">3. Transaction Code (Instr. 8)</th>
+                        <th style="width:19%;" colspan="3">4. Securities Acquired (A) or Disposed Of (D) (Instr. 3, 4
+                            and 5)
+                        </th>
+                        <th style="width:11%;" rowspan="2">5. Amount of Securities Beneficially Owned Following Reported
+                            Transaction(s)
+                            (Instr. 3. and 4)</th>
+                        <th style="width:9%;" rowspan="2">6. Ownership Form: Direct (D) or Indirect (I) (Instr. 4)</th>
+                        <th style="width:8%;" rowspan="2">7. Nature of Indirect Beneficial Ownership (Instr. 4)</th>
+                    </tr>
+                    <tr>
+                        <th>Code</th>
+                        <th>V</th>
+                        <th>Amount</th>
+                        <th>(A) or (D)</th>
+                        <th>Price ($)</th>
+                    </tr>
+                    <tr>
+                        <td><label class="userInput" id="titleOfSecp2"></label></td>
+                        <td><label class="userInput" id="txnDatep2"></label></td>
+                        <td><label class="userInput" id="exeDatep2"></label></td>
+                        <td><label class="userInput" id="codep2"></label></td>
+                        <td><label class="userInput" id="Vp2"></label></td>
+                        <td><label class="userInput" id="amountp2"></label></td>
+                        <td><label class="userInput" id="AorDp2"></label></td>
+                        <td><label class="userInput" id="pricep2"></label></td>
+                        <td><label class="userInput" id="amountOfSecp2"></label></td>
+                        <td><label class="userInput" id="ownershipFormp2"></label></td>
+                        <td><label class="userInput" id="natureOfOwnershipp2"></label></td>
+                    </tr>
+                </table>
+                <!--TABLE 2-->
+                <table id="tableTwo">
+                    <thead>
+                        <tr>
+                            <th id="cellTTwo" colspan="16">
+                                <!--changed h3 to p tag w3validator-->
+                                <p id="titleTwo">Table II - Derivative Securities Acquired, Disposed of, or
+                                    Beneficially
+                                    Owned<br>(e.g., puts, calls, warrants, options, convertible securities)</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th style="width: 13%;" rowspan="2">1. Title of Derivative Security (Instr. 3)
+                            </th>
+                            <th style="width: 5%;" rowspan="2">2. Conversion or Exercise Price of Derivative Security
+                            </th>
+                            <th style="width: 5%;" rowspan="2">3. Transaction Date
+                                (Month/Day/Year)</th>
+                            <th style="width: 5%;" rowspan="2">3A. Deemed Execution Date, if any
+                                (Month/Day/Year)</th>
+                            <th style="width: 9%;" colspan="2">4. Transaction Code (Instr.
+                                8)
+                            </th>
+                            <th style="width: 10%;" colspan="2">5.
+                                Number of Derivative Securities Acquired (A) or Disposed of (D) (Instr.
+                                3, 4 and 5)
+                            </th>
+                            <th style="width: 9%;" colspan="2">6. Date Exercisable and Expiration Date
+                                (Month/Day/Year)</th>
+                            <th style="width: 17%;" colspan="2">7. Title and Amount of Securities Underlying Derivative
+                                Security
+                                (Instr.
+                                3 and 4)
+                            </th>
+                            <th style="width: 6%;" rowspan="2">8. Price of Derivative Security (Instr.
+                                5)
+                            </th>
+                            <th style="width: 6%;" rowspan="2">9.
+                                Number of derivative Securities Beneficially Owned Following Reported Transaction(s)
+                                (Instr.
+                                4)
+                            </th>
+                            <th style="width: 6%;" rowspan="2">10. Ownership Form: Direct (D) or Indirect (I) (Instr.
+                                4)
+                            </th>
+                            <th style="width: 7%;" rowspan="2">11. Nature of Indirect Beneficial Ownership (Instr.
+                                4)
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Code</th>
+                            <th>V</th>
+                            <th>(A)</th>
+                            <th>(D)</th>
+                            <th>Date Exercisable</th>
+                            <th>Expiration Date</th>
+                            <th>Title</th>
+                            <th>Amount or Number of Shares($)</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <footer id="footInfo">
+                    <div style="width: 50%; float:left;">
+                        <h2 style="font-size: x-small;">Explanation of Responses:</h2>
+                        <div class="tAreaP" id="explanationp"></div>
+                        <h2 style="font-size: small;">Remarks:</h2>
+                        <div class="tAreaP" id="remarksp"></div>
+                        <div>
+                            <p>Reminder: Report on a separate line for each class of securities beneficially owned
+                                directly
+                                or
+                                indirectly</p>
+                            <p>* If the form is filed by more than one reporting person, see Instruction 4(b)(v)</p>
+                            <p>** Intentional misstatements or omissions of facts constitute Federal Criminal Violations
+                            </p>
+                            <p>Note: File three copies of this Form, one of which must be manually signed. If space is
+                                insufficient, see Instruction 6 for procedure.</p>
+                            <p><b>Persons who respond to the collection of information contained in this form are not
+                                    required
+                                    to respond unless the form displays a currently valid OMB Number.</b></p>
+                        </div>
+                    </div>
+                    <div  style="margin-left: auto; order: 2; width: fit-content;">
+                        <div id="signWrap2">
+                            <div id="divSign11">
+                                <div class="signature-pad" id="signature-pad-b4623c20-6549-461f-8d2f-ffb754f88093">
+                                    <img alt="signature" class="signature-pad-img" id="signature-pad-img-iddd" src="IMAGES/signbox.png">
+                                </div>
+                            </div>
+                            <div id="divSign22">
+                                <label class="userInput" id="finalDatep"></label>
+                                <label style="display: block;">Date</label>
+                                <div>
+                                    <button class="btnsTab" id="returnBtn" onclick="redirectMe()">Go Back</button>
+                                    <button class="btnsTab"  id="finalSubmitPrint" onclick="printMe()">Print Form</button>
+                                </div>
+                            </div>            
+                        </div>
+                    </div>
+            </footer>
+    </div>
+    <script src="JS/insert.js"></script>
+</body>
+</html>
