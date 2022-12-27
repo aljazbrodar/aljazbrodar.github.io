@@ -11,6 +11,40 @@ html, body{
     overflow-x: hidden;
 }
 
+#idHeadLogo{
+    max-height: 2rem !important;
+    width: auto !important;
+    height: auto;
+    max-width: 100%;
+    border-style: none;
+}
+#transitionSVG{
+    width:136px;
+    height: 32px;
+    max-width: 100%;
+    border-style: none;
+}
+
+
+#loading-screen{
+    position: absolute;
+    background-color: black;
+	height: 100%;
+	width: 100%;
+    z-index: 2;
+}
+
+
+
+#container{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column
+  }
 
 
 #deliverInput::placeholder {
@@ -29,7 +63,7 @@ html, body{
 }
 
 #locLabel {
-    position: relative;
+    /*position: relative;*/
 
 }
 
@@ -141,6 +175,16 @@ html, body{
     flex-direction: row !important;
     width: 100% !important;
 }
+@media (max-width: 1420px) {
+    #slideContainer{
+        margin-top: 58%;
+    }
+}
+@media (max-width: 1045px) {
+    #slideContainer{
+        margin-top: 55%;
+    }
+}
 @media (max-width: 960px){
     #navTag{
         display: flex !important;
@@ -150,27 +194,39 @@ html, body{
         display: none ;
         flex-direction: column !important;
     }
+    #slideContainer{
+        margin-top: 65%;
+    }
+    #sliderTitle{
+        font-size: 2.5rem ;
+    }
 }
-@media (min-width: 960px){
+@media (min-width: 961px){
     #hamMenu{
         display: none !important;
         float: right;
     }
-    #nav-items{
-        display: none ;
-        flex-direction: column !important;
-    }
+
     #nav-items{
         display: flex !important;
         flex-direction: row !important;
     }
 }
+@media (max-width: 740px) {
+    #appDiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 @media (min-width: 740px) {
     /* styles to apply when the viewport width is between 451 and 500 pixels */
     #sliderImage {
         width: 100%;
         height: 1000px;
     }
+    
 }
 
 @media (max-width: 740px) {
@@ -187,8 +243,11 @@ html, body{
     }
     #slideBtn{
         height: 30px;
-        width: 130px;
+        width: 136px;
         font-size: 0.5rem ;
+    }
+    #slideContainer{
+        margin-top: 60%;
     }
 }
 
@@ -209,7 +268,7 @@ html, body{
         height: 300px;
     }
     #sliderTitle{
-        font-size: 1.5rem ;
+        font-size: 1rem ;
     }
     #sliderText{
         font-size: 0.5rem;
@@ -223,6 +282,9 @@ html, body{
     }
     #btnGS{
         width: 70px ;
+    }
+    #slideContainer{
+        margin-top: 40%;
     }
 }
 @media (max-width: 450px) {
@@ -275,5 +337,4 @@ html, body{
         font-size: 0.4rem;
     }
 }
-
 

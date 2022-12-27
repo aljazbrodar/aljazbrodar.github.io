@@ -7,8 +7,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
     font-family: "Montserrat", sans-serif;
+    background: rgb(0, 0, 0);
   }
   
   /* Make the svg a white circle and give it the default spinning animation */

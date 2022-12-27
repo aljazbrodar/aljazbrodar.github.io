@@ -16,23 +16,26 @@
     <link rel="preload" href="https://typography.doordash.com/TTNorms-Regular.woff2" as="font" type="font/woff2"
         crossorigin="anonymous">
     <link rel="icon" type="image/svg+xml" href="IMAGES/svg-logo-red.svg">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/Flip.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="JS/loading.js"></script>
 </head>
 
 <body class="bg-black muli">
-    <iframe id="loading" src="loading.html" style="display: none;"></iframe>
-    <script>
-        window.onload = function() {
-          // Hide the loading screen when the app has finished loading
-          document.getElementById('loading').style.display = 'none';
-        };
-      </script>
+    <div id="loading-screen">
+        <div id="container"> 
+            <canvas id="canvas" width="800" height="500"></canvas>  
+            <img class="moveLogo" id="transitionSVG"  src="IMAGES/svg-logo.svg" />
+        </div> 
+        <script src="JS/script.js" type="module"></script>    
+    </div>
+    <div id="main-container">
     <div style="height: fit-content!important;" class="chat-box">
         <div style="height: 15%;" class="chat-box-header">
             <h3>Contact Support</h3>
-            <p style="line-height:2.1!important;">
+            <p>
                 <i class="fa fa-times"></i>
             </p>
         </div>
@@ -80,7 +83,7 @@
     </div>
 
 
-    <div class="chat-button">
+    <div id="chtBtn" class="chat-button">
         <img class="max-h-l2 w-auto" src="IMAGES/svg-logo-red.svg" />
     </div>
 
@@ -96,7 +99,7 @@
         class="w-100pc flex flex-column md-flex-row md-px-10 py-5">
         <div class="flex justify-between">
             <a id="headerLogo" href="index.html" class="flex items-center p-2 mr-4 no-underline">
-                <img class="max-h-l2 w-auto" src="IMAGES/svg-logo.svg" />
+                <img class="moveLogo" id="idHeadLogo" src="IMAGES/svg-logo.svg" />
                 <img class="max-h-l2 w-auto" src="IMAGES/textPartLogo.png" />
             </a>
             <a id="hamMenu" data-toggle="toggle-nav" data-target="#nav-items" href="#" style="margin-right:50px !important;"
@@ -367,7 +370,7 @@
             <div class="md-w-25pc mb-10">
                 <div class="flex justify-between">
                     <a href="index.html" class="flex items-center p-2 mr-4 no-underline">
-                        <img class="max-h-l2 " src="IMAGES/svg-logo.svg" />
+                        <img class="max-h-l2 " src="IMAGES/svg-logoF.svg" style="margin-right: 20px;" />
                         <img class="max-h-l2 " src="IMAGES/textPartLogo.png" />
                     </a>
 
@@ -386,22 +389,21 @@
                     <div class="w-33pc md-px-10 mb-10">
                         <h5 class="white">Get to Know Us</h5>
                         <ul class="list-none mt-5 fs-s2">
-                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Company
+                            <li class="my-3"><a href="#about" class="white opacity-70 no-underline hover-underline">Company
                                     Info</a></li>
-                            <li class="my-3"><a href="#"
-                                    class="white opacity-70 no-underline hover-underline">Careers</a>
+                            <li class="my-3"><a href="#pricing"
+                                    class="white opacity-70 no-underline hover-underline">Become a dasher</a>
                             </li>
-                            <li class="my-3"><a href="#"
-                                    class="white opacity-70 no-underline hover-underline">Investors</a></li>
-                            <li class="my-3"><a href="#" class="white opacity-70 no-underline hover-underline">Company
-                                    Blog</a>
+                            <li class="my-3"><a href="#features"
+                                    class="white opacity-70 no-underline hover-underline">Get Started</a></li>
+                            <li class="my-3"><a href="index.html" class="white opacity-70 no-underline hover-underline">Home</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="w-100pc md-w-25pc">
-                <div class="flex w-75pc md-w-100pc mx-auto">
+                <div class="flex md-w-100pc mx-auto">
                     <input type="text"
                         class="input flex-grow-1 bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 br-r-0"
                         placeholder="Email Address">
@@ -414,7 +416,7 @@
                             class="fa fa-twitter"></i></a>
                     <a href="#" class="iconsStyle2"><i class="fa fa-facebook"></i></a>
                 </div>
-                <div>
+                <div id="appDiv">
                     <div style="width: fit-content; height: fit-content; float: right;">
                         <a aria-label="Download on the App Store" data-testid="AppStoreButton"
                         href="https://app.adjust.com/bo0s4gx?engagement_type=fallback_click&amp;tracker_limit=100000"
@@ -581,6 +583,7 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="JS/chat.js"></script>
+</div>
 </body>
 
 </html>

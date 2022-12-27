@@ -1,41 +1,67 @@
-
-
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-//1
+
+
+
 function drawShape(ctx, xoff, yoff) {
   ctx.beginPath();
   ctx.moveTo(336 + xoff, 156 + yoff);
-  ctx.bezierCurveTo(356 + xoff, 156 + yoff, 382 + xoff, 164 + yoff, 394 + xoff, 175 + yoff);
-  ctx.bezierCurveTo(402 + xoff, 182 + yoff, 418 + xoff, 197 + yoff, 425 + xoff, 215 + yoff);
-  ctx.bezierCurveTo(434 + xoff, 238 + yoff, 436 + xoff, 270 + yoff, 426 + xoff, 292 + yoff);
-  ctx.bezierCurveTo(420 + xoff, 306 + yoff, 417 + xoff, 311 + yoff, 400 + xoff, 329 + yoff);
-  ctx.bezierCurveTo(386 + xoff, 344 + yoff, 360 + xoff, 356 + yoff, 337 + xoff, 356 + yoff);
-  ctx.bezierCurveTo(322 + xoff, 356 + yoff, 302 + xoff, 356 + yoff, 283 + xoff, 356 + yoff);
-  ctx.bezierCurveTo(268 + xoff, 356 + yoff, 271 + xoff, 359 + yoff, 259 + xoff, 347 + yoff);
-  ctx.bezierCurveTo(250 + xoff, 338 + yoff, 222 + xoff, 311 + yoff, 209 + xoff, 298 + yoff);
-  ctx.bezierCurveTo(198 + xoff, 287 + yoff, 208 + xoff, 280 + yoff, 221 + xoff, 280 + yoff);
-  ctx.bezierCurveTo(238 + xoff, 280 + yoff, 304 + xoff, 280 + yoff, 332 + xoff, 279 + yoff);
-  ctx.bezierCurveTo(347 + xoff, 278 + yoff, 355 + xoff, 269 + yoff, 355 + xoff, 256 + yoff);
-  ctx.bezierCurveTo(355 + xoff, 244 + yoff, 343 + xoff, 234 + yoff, 330 + xoff, 234 + yoff);
-  ctx.bezierCurveTo(315 + xoff, 234 + yoff, 175 + xoff, 235 + yoff, 160 + xoff, 234 + yoff);
-  ctx.bezierCurveTo(147 + xoff, 233 + yoff, 148 + xoff, 235 + yoff, 141 + xoff, 228 + yoff);
-  ctx.bezierCurveTo(138 + xoff, 225 + yoff, 101 + xoff, 189 + yoff, 87 + xoff, 175 + yoff);
-  ctx.bezierCurveTo(74 + xoff, 162 + yoff, 82 + xoff, 157 + yoff, 97 + xoff, 157 + yoff);
-  ctx.bezierCurveTo(112 + xoff, 157 + yoff, 351 + xoff, 156 + yoff, 336 + xoff, 156 + yoff);
   ctx.lineWidth = 5;
   // Set the fill style
   ctx.fillStyle = "red";
 
-  // Fill the path
-  ctx.fill();
+var xoff = 100;
+var yoff = 0;
+  const points = [
+    { x: 356 + xoff, y: 156 + yoff, cp1x: 382 + xoff, cp1y: 164 + yoff, cp2x: 394 + xoff, cp2y: 175 + yoff },
+    { x: 402 + xoff, y: 182 + yoff, cp1x: 418 + xoff, cp1y: 197 + yoff, cp2x: 425 + xoff, cp2y: 215 + yoff },
+    { x: 434 + xoff, y: 238 + yoff, cp1x: 436 + xoff, cp1y: 270 + yoff, cp2x: 426 + xoff, cp2y: 292 + yoff },
+    { x: 420 + xoff, y: 306 + yoff, cp1x: 417 + xoff, cp1y: 311 + yoff, cp2x: 400 + xoff, cp2y: 329 + yoff },
+    { x: 386 + xoff, y: 344 + yoff, cp1x: 360 + xoff, cp1y: 356 + yoff, cp2x: 337 + xoff, cp2y: 356 + yoff },
+    { x: 322 + xoff, y: 356 + yoff, cp1x: 302 + xoff, cp1y: 356 + yoff, cp2x: 283 + xoff, cp2y: 356 + yoff },
+    { x: 268 + xoff, y: 356 + yoff, cp1x: 271 + xoff, cp1y: 359 + yoff, cp2x: 259 + xoff, cp2y: 347 + yoff },
+    { x: 250 + xoff, y: 338 + yoff, cp1x: 222 + xoff, cp1y: 311 + yoff, cp2x: 209 + xoff, cp2y: 298 + yoff },
+    { x: 198 + xoff, y: 287 + yoff, cp1x: 208 + xoff, cp1y: 280 + yoff, cp2x: 221 + xoff, cp2y: 280 + yoff },
+    { x: 238 + xoff, y: 280 + yoff, cp1x: 304 + xoff, cp1y: 280 + yoff, cp2x: 332 + xoff, cp2y: 279 + yoff },
+    { x: 347 + xoff, y: 278 + yoff, cp1x: 355 + xoff, cp1y: 269 + yoff, cp2x: 355 + xoff, cp2y: 256 + yoff },
+    { x: 355 + xoff, y: 244 + yoff, cp1x: 343 + xoff, cp1y: 234 + yoff, cp2x: 330 + xoff, cp2y: 234 + yoff },
+    { x: 315 + xoff, y: 234 + yoff, cp1x: 175 + xoff, cp1y: 235 + yoff, cp2x: 160 + xoff, cp2y: 234 + yoff },
+    { x: 147 + xoff, y: 233 + yoff, cp1x: 148 + xoff, cp1y: 235 + yoff, cp2x: 141 + xoff, cp2y: 228 + yoff },
+    { x: 138 + xoff, y: 225 + yoff, cp1x: 101 + xoff, cp1y: 189 + yoff, cp2x: 87 + xoff, cp2y: 175 + yoff },
+    { x: 74 + xoff, y: 162 + yoff, cp1x: 82 + xoff, cp1y: 157 + yoff, cp2x: 97 + xoff, cp2y: 157 + yoff },
+    { x: 112 + xoff, y: 157 + yoff, cp1x: 351 + xoff, cp1y: 156 + yoff, cp2x: 336 + xoff, cp2y: 156 + yoff },
+  ]
+  let i = 0;
+  const drawNextPoint = () => {
+    if (i < points.length) {
+      ctx.bezierCurveTo(
+        points[i].x, points[i].y,
+        points[i].cp1x, points[i].cp1y,
+        points[i].cp2x, points[i].cp2y,
+      );
+      ctx.strokeStyle = "white";
+      ctx.stroke();
+      i++;
+      setTimeout(drawNextPoint, 40);
+    } else {
+      // Fill the path
+      ctx.fill();
 
-
-
+    }
+  };
+  drawNextPoint();
 }
 
 drawShape(ctx, 100, 0);
+
+
+
+
+
+
+
+
 
 
 
