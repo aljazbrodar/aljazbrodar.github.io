@@ -182,7 +182,13 @@ html, body{
 }
 @media (max-width: 1045px) {
     #slideContainer{
-        margin-top: 55%;
+        margin-top: 75%;
+    }
+    #sliderTitle{
+        font-size: 2.5rem ;
+    }
+    #sliderText{
+        font-size: 0.8rem;
     }
 }
 @media (max-width: 960px){
@@ -194,9 +200,7 @@ html, body{
         display: none ;
         flex-direction: column !important;
     }
-    #slideContainer{
-        margin-top: 65%;
-    }
+
     #sliderTitle{
         font-size: 2.5rem ;
     }
@@ -211,6 +215,9 @@ html, body{
         display: flex !important;
         flex-direction: row !important;
     }
+}
+@media (max-width: 840px) {
+
 }
 @media (max-width: 740px) {
     #appDiv{
@@ -245,10 +252,9 @@ html, body{
         height: 30px;
         width: 136px;
         font-size: 0.5rem ;
+
     }
-    #slideContainer{
-        margin-top: 60%;
-    }
+
 }
 
 @media (max-width: 685px) {
@@ -268,10 +274,11 @@ html, body{
         height: 300px;
     }
     #sliderTitle{
-        font-size: 1rem ;
+        font-size: 0.6rem ;
     }
     #sliderText{
         font-size: 0.5rem;
+        margin: 0;
     }
     #headerLogo{
         width: 100px;
@@ -284,7 +291,7 @@ html, body{
         width: 70px ;
     }
     #slideContainer{
-        margin-top: 40%;
+        margin-top: 55%;
     }
 }
 @media (max-width: 450px) {
@@ -292,6 +299,9 @@ html, body{
     /* styles to apply when the viewport width is between 401 and 450 pixels */
     #sliderImage {
         width: 418px;
+    }
+    #slideContainer{
+        margin-top: 65%;
     }
 }
 
@@ -320,6 +330,9 @@ html, body{
     #inpGS{
         width: 40px ;
     }
+    #slideContainer{
+        margin-top: 70%;
+    }
 }
 @media (max-width: 270px) {
 
@@ -330,9 +343,7 @@ html, body{
     #headerLogo{
         width: 50px;
     }
-    #sliderTitle{
-        font-size: 1rem ;
-    }
+
     #sliderText{
         font-size: 0.4rem;
     }

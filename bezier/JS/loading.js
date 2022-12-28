@@ -1,7 +1,9 @@
+
 window.onload = function() {
+  document.getElementById("transitionSVG").style.visibility = "hidden";
   document.getElementById("loading-screen").style.display = "block";
   document.getElementById("chtBtn").style.visibility = "hidden";
-  document.getElementById("transitionSVG").style.visibility = "hidden";
+
   gsap.registerPlugin(Flip);
 
   const squares = gsap.utils.toArray(".moveLogo");
@@ -29,6 +31,7 @@ window.onload = function() {
         canvas.parentNode.removeChild(canvas);
         setTimeout(() => {
           document.getElementById("transitionSVG").style.visibility = "visible";
+          document.getElementById("chtBtn").style.visibility = "visible";
           const state = Flip.getState(squares);
           swap(squares);
           Flip.from(state, {
@@ -54,7 +57,7 @@ window.onload = function() {
   }
   // Show the chtBtn element
   function showChtBtn() {
-    document.getElementById("chtBtn").style.visibility = "visible";
+    
   }
   
   // Given an Array of two siblings, append the one that's first so it's last (swap)
